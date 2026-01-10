@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Integration Bee Physics UMSA</title>
+    
+    <!-- Estilos externos (reutilizando el mismo CSS) -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Fondos decorativos -->
+    <div class="equations-bg"></div>
+    <div class="honeycomb-bg"></div>
+    
+    <!-- Símbolos matemáticos flotantes -->
+    <div class="math-symbol" style="top: 8%; left: 12%;">∫</div>
+    <div class="math-symbol" style="top: 15%; left: 85%; animation-delay: -3s;">dx</div>
+    <div class="math-symbol" style="top: 25%; left: 5%; animation-delay: -7s;">∂</div>
+    <div class="math-symbol" style="top: 35%; left: 92%; animation-delay: -11s;">∇</div>
+    <div class="math-symbol" style="top: 55%; left: 88%; animation-delay: -13s;">dy</div>
+    <div class="math-symbol" style="top: 75%; left: 90%; animation-delay: -2s;">∞</div>
+
+    <!-- Navegación -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo-nav">
+                <img src="assets/images/logo.png" alt="Logo Integration Bee">
+                <span class="logo-text">Integration Bee</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#ganadores">Ganadores</a></li>
+                <li><a href="index.html#preguntas">Banco de Preguntas</a></li>
+                <li><a href="galeria.html" class="active">Galería</a></li>
+                <li><a href="index.html#sobre">Sobre Nosotros</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header de Galería -->
+    <div class="gallery-header">
+        <h1>📸 Galería</h1>
+        <p>Revive los mejores momentos del Integration Bee Physics</p>
+    </div>
+
+    <!-- Controles de Galería -->
+    <div class="gallery-controls">
+        <div class="controls-container">
+            <div class="gallery-tabs">
+                <button class="tab-btn active" onclick="filterGallery('photos')">📷 Fotos</button>
+                <button class="tab-btn" onclick="filterGallery('videos')">🎥 Videos</button>
+            </div>
+            
+            <div class="gallery-info">
+                <div class="loading-indicator" id="loadingIndicator">
+                    <div class="spinner"></div>
+                    <span>Cargando imágenes...</span>
+                </div>
+                <span id="imageCount">0 imágenes</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grid de Galería -->
+    <div class="gallery-section">
+        <div class="gallery-grid" id="galleryContainer">
+            <div class="empty-state">
+                <h3>Cargando galería...</h3>
+                <p>Por favor espera un momento</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox para ver imágenes en grande -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Integration Bee Physics</h3>
+                <p>
+                    Una iniciativa estudiantil de la Carrera de Física, con el apoyo de la
+                    Facultad de Ciencias Puras y Naturales de la Universidad Mayor de San Andrés.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <a href="index.html">Inicio</a>
+                <a href="index.html#ganadores">Ganadores</a>
+                <a href="index.html#preguntas">Banco de Preguntas</a>
+                <a href="galeria.html">Galería</a>
+            </div>
+            <div class="footer-section">
+                <h3>Recursos</h3>
+                <a href="#">Reglamento</a>
+                <a href="#">Calendario de Competiciones</a>
+                <a href="#">Material de Estudio</a>
+                <a href="#">Preguntas Frecuentes</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Integration Bee Physics UMSA. Todos los derechos reservados.</p>
+            <p>Diseñado con 💛 y ∫ por estudiantes para estudiantes</p>
+        </div>
+    </footer>
+
+    <!-- Scripts externos -->
+    <script src="js/config.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

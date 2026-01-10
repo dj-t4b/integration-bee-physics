@@ -1,279 +1,425 @@
-# üìö Documentaci√≥n - Integration Bee Physics UMSA
+# ?? DocumentaciÛn - Integration Bee Physics UMSA
 
-## üéØ √çndice
-1. [Introducci√≥n](#introducci√≥n)
+## ?? Õndice
+1. [IntroducciÛn](#introducciÛn)
 2. [Estructura del Proyecto](#estructura-del-proyecto)
-3. [Configuraci√≥n de Contenido](#configuraci√≥n-de-contenido)
-4. [Personalizaci√≥n de Dise√±o](#personalizaci√≥n-de-dise√±o)
-5. [Publicaci√≥n en GitHub Pages](#publicaci√≥n-en-github-pages)
-6. [Mantenimiento y Actualizaci√≥n](#mantenimiento-y-actualizaci√≥n)
-7. [Soluci√≥n de Problemas](#soluci√≥n-de-problemas)
+3. [ConfiguraciÛn de Google Drive API](#configuraciÛn-de-google-drive-api)
+4. [ConfiguraciÛn de Contenido](#configuraciÛn-de-contenido)
+5. [PersonalizaciÛn de DiseÒo](#personalizaciÛn-de-diseÒo)
+6. [PublicaciÛn en GitHub Pages](#publicaciÛn-en-github-pages)
+7. [Mantenimiento y ActualizaciÛn](#mantenimiento-y-actualizaciÛn)
+8. [SoluciÛn de Problemas](#soluciÛn-de-problemas)
+9. [Recursos Adicionales](#recursos-adicionales)
 
 ---
 
-## üåü Introducci√≥n
+## ?? IntroducciÛn
 
-Este sitio web fue dise√±ado para el grupo **Integration Bee Physics** de la UMSA. Es una p√°gina moderna, responsiva y f√°cil de actualizar que incluye:
+Este sitio web fue diseÒado para el grupo **Integration Bee Physics** de la UMSA. Es una p·gina moderna, responsiva y f·cil de actualizar que incluye:
 
-- ‚úÖ Secci√≥n de √∫ltimos ganadores
-- ‚úÖ Banco de preguntas con visor de PDFs
-- ‚úÖ Galer√≠a de fotos y videos
-- ‚úÖ Secci√≥n "Sobre Nosotros"
-- ‚úÖ Dise√±o responsivo (m√≥vil, tablet, desktop)
-- ‚úÖ Animaciones sutiles y tem√°tica de abejas
-- ‚úÖ Tipograf√≠as intercambiables
+- ? SecciÛn de ˙ltimos ganadores
+- ? Banco de preguntas con visor de PDFs
+- ? **GalerÌa autom·tica con Google Drive**
+- ? Videos de YouTube integrados
+- ? SecciÛn "Sobre Nosotros"
+- ? DiseÒo responsivo (mÛvil, tablet, desktop)
+- ? Animaciones sutiles y tem·tica de abejas
+- ? TipografÌas intercambiables
 
----
+### ?? VersiÛn 2.0 - Arquitectura Modular
 
-## üìÅ Estructura del Proyecto
-
-```
-integration-bee-umsa/
-‚îÇ
-‚îú‚îÄ‚îÄ index.html              # Archivo principal (HTML + CSS + JS todo en uno)
-‚îú‚îÄ‚îÄ assets/                 # Carpeta para recursos
-‚îÇ   ‚îú‚îÄ‚îÄ images/            # Im√°genes del proyecto
-‚îÇ   ‚îÇ   ‚îú‚îÄ‚îÄ logo.png       # Logo del Integration Bee
-‚îÇ   ‚îÇ   ‚îú‚îÄ‚îÄ equations-background.png  # ‚ö†Ô∏è IMPORTANTE: Fondo de ecuaciones
-‚îÇ   ‚îÇ   ‚îî‚îÄ‚îÄ galeria/       # Fotos de competencias
-‚îÇ   ‚îú‚îÄ‚îÄ pdfs/              # Bancos de preguntas en PDF
-‚îÇ   ‚îÇ   ‚îî‚îÄ‚îÄ torneos/
-‚îÇ   ‚îî‚îÄ‚îÄ videos/            # Videos (si no usas YouTube)
-‚îÇ
-‚îú‚îÄ‚îÄ README.md              # Informaci√≥n general del proyecto
-‚îî‚îÄ‚îÄ docs/                  # Esta documentaci√≥n
-    ‚îî‚îÄ‚îÄ MANUAL.md
-```
-
-**‚ö†Ô∏è IMPORTANTE - Imagen de Fondo de Ecuaciones:**
-
-El sitio web utiliza una imagen PNG con ecuaciones matem√°ticas como fondo decorativo. Esta imagen **DEBE** estar ubicada en:
-
-```
-assets/images/equations-background.png
-```
-
-**Requisitos de la imagen:**
-- **Formato:** PNG con fondo transparente
-- **Peso recomendado:** 200-400 KB (optimizada)
-- **Resoluci√≥n recomendada:** 1280x900 o 1024x720 px
-- **Contenido:** Ecuaciones, gr√°ficos y s√≠mbolos matem√°ticos distribuidos uniformemente
-
-**C√≥mo optimizar la imagen (si es necesario):**
-1. Ve a https://tinypng.com/
-2. Sube tu imagen PNG
-3. Descarga la versi√≥n optimizada
-4. Gu√°rdala como `equations-background.png`
-
-Si no tienes esta imagen, el sitio funcionar√° normalmente pero sin el fondo de ecuaciones del certificado.
-
-**Nota:** El sitio est√° dise√±ado como un archivo HTML √∫nico (`index.html`) para facilitar la publicaci√≥n en GitHub Pages.
+Esta versiÛn utiliza una **estructura modular** con archivos separados:
+- ?? **HTML separado** - P·ginas limpias y f·ciles de leer
+- ?? **CSS compartido** - Un solo archivo de estilos
+- ?? **JavaScript modular** - CÛdigo organizado por funcionalidad
+- ?? **ConfiguraciÛn centralizada** - Datos en un solo lugar
 
 ---
 
-## ‚öôÔ∏è Configuraci√≥n de Contenido
+## ?? Estructura del Proyecto
 
-Todo el contenido editable se encuentra dentro del objeto JavaScript `websiteData` en el archivo `index.html`. Busca esta secci√≥n (aproximadamente l√≠nea 700):
+```
+integration-bee-physics/
+¶
++-- index.html                # P·gina principal
++-- galeria.html              # P·gina de galerÌa (Google Drive)
+¶
++-- css/
+¶   +-- styles.css            # Estilos compartidos (ambas p·ginas)
+¶
++-- js/
+¶   +-- config.js             # ?? ConfiguraciÛn y datos (EDITAR AQUÕ)
+¶   +-- main.js               # LÛgica de index.html
+¶   +-- gallery.js            # LÛgica de galerÌa (Google Drive)
+¶
++-- assets/
+¶   +-- images/
+¶   ¶   +-- logo.png
+¶   ¶   +-- miembros.jpg
+¶   ¶   +-- equations-background.png  # ?? IMPORTANTE: Fondo matem·tico
+¶   +-- pdfs/
+¶       +-- torneos/          # Bancos de preguntas en PDF
+¶
++-- README.md                 # Instrucciones r·pidas
++-- MANUAL.md                 # Esta documentaciÛn completa
+```
+
+### ?? DescripciÛn de Archivos Principales
+
+| Archivo | PropÛsito | Cu·ndo Editar |
+|---------|-----------|---------------|
+| **index.html** | Estructura de la p·gina principal | Raramente (solo cambios estructurales) |
+| **galeria.html** | Estructura de la p·gina de galerÌa | Raramente |
+| **css/styles.css** | Todos los estilos visuales | Para cambiar colores, fuentes, diseÒo |
+| **js/config.js** | ? Datos editables (ganadores, preguntas, videos) | **Frecuentemente** (despuÈs de cada torneo) |
+| **js/main.js** | Funcionalidad de index.html | Raramente (solo mejoras tÈcnicas) |
+| **js/gallery.js** | ConexiÛn con Google Drive | Raramente (solo configuraciÛn inicial) |
+
+---
+
+## ?? ConfiguraciÛn de Google Drive API
+
+La galerÌa carga im·genes autom·ticamente desde Google Drive usando Google Apps Script.
+
+### ?? Paso 1: Crear el Google Apps Script
+
+1. Ve a: **https://script.google.com**
+2. Clic en **"Nuevo proyecto"**
+3. Nombra el proyecto: **"Integration Bee Gallery API"**
+4. Borra todo el cÛdigo predeterminado
+5. Pega este cÛdigo:
 
 ```javascript
-const websiteData = {
-    winners: [...],
-    questionBanks: [...],
-    gallery: {...}
-};
+function doGet(e) {
+  const folderId = '1IYcXth0WqpryjJtan4fVl38xGfy1KHfs'; // ID de tu carpeta de Drive
+  const folder = DriveApp.getFolderById(folderId);
+  const files = folder.getFiles();
+  
+  const images = [];
+  
+  while (files.hasNext()) {
+    const file = files.next();
+    const mimeType = file.getMimeType();
+    
+    // Solo im·genes
+    if (mimeType.indexOf('image') !== -1) {
+      images.push({
+        name: file.getName(),
+        url: `https://drive.google.com/uc?export=view&id=${file.getId()}`,
+        thumbnail: `https://drive.google.com/thumbnail?id=${file.getId()}&sz=w400`,
+        date: file.getDateCreated().toISOString()
+      });
+    }
+  }
+  
+  // Ordenar por fecha (m·s recientes primero)
+  images.sort((a, b) => new Date(b.date) - new Date(a.date));
+  
+  const output = ContentService.createTextOutput(JSON.stringify({
+    success: true,
+    images: images,
+    total: images.length
+  }));
+  
+  output.setMimeType(ContentService.MimeType.JSON);
+  return output;
+}
 ```
 
-### üèÜ Agregar Ganadores
+6. Clic en **?? Guardar** (Ìcono de diskette)
+
+### ?? Paso 2: Publicar el Script
+
+1. Clic en **"Implementar"** ? **"Nueva implementaciÛn"**
+2. En "Seleccionar tipo", clic en el ?? y elige: **"AplicaciÛn web"**
+3. ConfiguraciÛn:
+   - **DescripciÛn:** "API para galerÌa Integration Bee"
+   - **Ejecutar como:** Tu cuenta
+   - **QuiÈn tiene acceso:** **Cualquier persona** ?? (Importante)
+4. Clic en **"Implementar"**
+5. Aparecer· una ventana de permisos:
+   - Clic en **"Autorizar acceso"**
+   - Selecciona tu cuenta de Google
+   - Clic en **"Avanzado"** ? **"Ir a [nombre del proyecto] (no seguro)"**
+   - Clic en **"Permitir"**
+6. **?? COPIA LA URL** que aparece (algo como):
+   ```
+   https://script.google.com/macros/s/AKfycbz...ABC123.../exec
+   ```
+
+### ?? Paso 3: Configurar Permisos de la Carpeta de Drive
+
+1. Abre tu carpeta de Drive:
+   ```
+   https://drive.google.com/drive/folders/1IYcXth0WqpryjJtan4fVl38xGfy1KHfs
+   ```
+2. Clic derecho ? **"Compartir"**
+3. En **"Acceso general"**:
+   - Cambia de "Restringido" a **"Cualquier persona con el enlace"**
+   - Rol: **Lector**
+4. Clic en **"Copiar enlace"** (opcional, para respaldo)
+5. Clic en **"Listo"**
+
+### ?? Paso 4: Actualizar config.js
+
+1. Abre el archivo `js/config.js` en tu editor de texto
+2. Busca esta lÌnea (aproximadamente lÌnea 10):
+   ```javascript
+   const GOOGLE_SCRIPT_URL = 'TU_URL_DEL_GOOGLE_APPS_SCRIPT_AQUI';
+   ```
+3. Reempl·zala con tu URL real:
+   ```javascript
+   const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz...ABC123.../exec';
+   ```
+4. Guarda el archivo
+
+### ? Paso 5: Probar
+
+1. Abre `galeria.html` en un navegador
+2. DeberÌas ver:
+   - Indicador de "Cargando im·genes..."
+   - Luego tus fotos aparecen autom·ticamente
+   - Contador de im·genes actualizado
+
+**Si no funciona**, ve a [SoluciÛn de Problemas](#soluciÛn-de-problemas).
+
+### ?? Agregar Nuevas Fotos
+
+**°S˙per f·cil!** Solo:
+1. Sube las fotos a tu carpeta de Google Drive
+2. °Listo! Aparecer·n autom·ticamente en la web
+
+**No necesitas:**
+- ? Editar cÛdigo
+- ? Actualizar listas manualmente
+- ? Subir im·genes a GitHub
+
+---
+
+## ?? ConfiguraciÛn de Contenido
+
+**TODO el contenido editable est· en un solo archivo:**
+
+?? **`js/config.js`** ? Edita aquÌ
+
+### ?? Actualizar Ganadores
+
+Abre `js/config.js` y busca el array `winnersData` (lÌnea ~30):
 
 ```javascript
-winners: [
+const winnersData = [
     {
-        position: "1er Lugar",           // Texto del puesto
-        name: "Nombre del Ganador",      // Nombre completo
-        edition: "1¬∫ Torneo Integration Bee Physics",
-        date: "27 de septiembre, 2025"   // Fecha de la competencia
+        position: "1er Lugar",
+        name: "JoaquÌn Uscamayta (IngenierÌa QuÌmica, UMSA)",
+        edition: "1∫ Torneo Integration Bee Physics",
+        date: "27 de septiembre, 2025"
     },
     {
         position: "2do Lugar",
-        name: "Otro Ganador",
-        edition: "1¬∫ Torneo Integration Bee Physics",
+        name: "Boris Vargas Villareal (IngenierÌa Electrica, UMSA)",
+        edition: "1∫ Torneo Integration Bee Physics",
         date: "27 de septiembre, 2025"
-    }
-    // Agregar m√°s ganadores...
-]
-```
-
-### üìù Agregar Bancos de Preguntas
-
-**Paso 1:** Sube tu PDF a GitHub en la carpeta `assets/pdfs/`
-
-**Paso 2:** Agrega la informaci√≥n al array `questionBanks`:
-
-```javascript
-questionBanks: [
-    {
-        year: 2025,                    // A√±o de la competencia
-        title: "1¬∫ Torneo Integration Bee Physics",
-        edition: "Primera Edici√≥n",
-        problems: 20,                  // N√∫mero de problemas
-        pdfUrl: "assets/pdfs/torneo-2025.pdf"  // Ruta al PDF
     },
     {
-        year: 2026,
-        title: "2¬∫ Torneo Integration Bee Physics",
-        edition: "Segunda Edici√≥n",
-        problems: 25,
-        pdfUrl: "assets/pdfs/torneo-2026.pdf"
+        position: "3er Lugar",
+        name: "Miguel Lopez Monasterios (FÌsica, UMSA)",
+        edition: "1∫ Torneo Integration Bee Physics",
+        date: "27 de septiembre, 2025"
     }
-]
+    // Agregar m·s ganadores aquÌ
+];
 ```
 
-**Nota sobre PDFs:** 
-- Para que el visor funcione correctamente con PDFs locales, necesitas alojar el PDF en un lugar p√∫blico.
-- **Opci√≥n 1:** S√∫belo a GitHub en tu repositorio (`assets/pdfs/archivo.pdf`)
-- **Opci√≥n 2:** Usa Google Drive (compartir ‚Üí obtener enlace) y modifica la URL as√≠:
-  ```
-  https://drive.google.com/file/d/ID_DEL_ARCHIVO/view
-  ```
-  Cambia a:
-  ```
-  https://drive.google.com/uc?export=view&id=ID_DEL_ARCHIVO
-  ```
-
-### üì∏ Agregar Fotos a la Galer√≠a
+**Para agregar un nuevo ganador:**
 
 ```javascript
-gallery: {
-    photos: [
-        {
-            url: "assets/images/competencia-2025.jpg",
-            caption: "Competencia 2025"
-        },
-        {
-            url: "assets/images/ganadores.jpg",
-            caption: "Ceremonia de premiaci√≥n"
-        }
-        // Agregar m√°s fotos...
-    ]
+{
+    position: "1er Lugar",
+    name: "Nuevo Ganador (Carrera, UMSA)",
+    edition: "2∫ Torneo Integration Bee Physics",
+    date: "15 de marzo, 2026"
+},
+```
+
+### ?? Actualizar Banco de Preguntas
+
+En `js/config.js`, busca `questionBanksData` (lÌnea ~50):
+
+```javascript
+const questionBanksData = [
+    {
+        year: 2025,
+        title: "1∫ Torneo Integration Bee Physics",
+        type: "Problemas de 5 minutos",
+        edition: "Primera EdiciÛn",
+        problems: 50,
+        pdfUrl: "#"  // Cambiar por URL real
+    },
+    {
+        year: 2025,
+        title: "1∫ Torneo Integration Bee Physics",
+        type: "Problemas de 3 minutos",
+        edition: "Primera EdiciÛn",
+        problems: 30,
+        pdfUrl: "#"
+    }
+];
+```
+
+**Para agregar un nuevo banco:**
+
+1. Sube el PDF a GitHub en `assets/pdfs/torneos/`
+2. Agrega una nueva entrada:
+
+```javascript
+{
+    year: 2026,
+    title: "2∫ Torneo Integration Bee Physics",
+    type: "Problemas de 5 minutos",
+    edition: "Segunda EdiciÛn",
+    problems: 60,
+    pdfUrl: "assets/pdfs/torneos/2026-problemas-5min.pdf"
 }
 ```
 
-### üé• Agregar Videos (YouTube)
+**Opciones para la URL del PDF:**
 
-**Paso 1:** Sube tu video a YouTube
+**OpciÛn 1 - Archivo en GitHub:**
+```javascript
+pdfUrl: "assets/pdfs/torneos/mi-archivo.pdf"
+```
 
-**Paso 2:** Obt√©n el ID del video (la parte despu√©s de `watch?v=`)
-- Ejemplo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
-- ID: `dQw4w9WgXcQ`
+**OpciÛn 2 - Google Drive:**
+1. Sube el PDF a Drive
+2. Clic derecho ? Compartir ? Cualquier persona con el enlace
+3. Copia el ID del enlace:
+   ```
+   https://drive.google.com/file/d/1ABC123xyz/view
+                                  ? Este es el ID
+   ```
+4. Usa esta URL:
+   ```javascript
+   pdfUrl: "https://drive.google.com/uc?export=view&id=1ABC123xyz"
+   ```
 
-**Paso 3:** Agr√©galo al c√≥digo:
+### ?? Actualizar Videos de YouTube
+
+En `js/config.js`, busca `videosData` (lÌnea ~90):
 
 ```javascript
-gallery: {
-    videos: [
-        {
-            youtubeId: "dQw4w9WgXcQ",
-            thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-            title: "Resumen 1¬∫ Torneo"
-        }
-    ]
+const videosData = [
+    {
+        youtubeId: 'dQw4w9WgXcQ',
+        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg',
+        title: 'Resumen 1∫ Torneo Integration Bee'
+    }
+];
+```
+
+**Para agregar un video:**
+
+1. Sube el video a YouTube
+2. Copia el ID de la URL:
+   ```
+   https://www.youtube.com/watch?v=ABC123xyz
+                                   ? Este es el ID
+   ```
+3. Agrega al array:
+
+```javascript
+{
+    youtubeId: 'ABC123xyz',
+    thumbnail: 'https://img.youtube.com/vi/ABC123xyz/maxresdefault.jpg',
+    title: 'Resumen 2∫ Torneo Integration Bee'
 }
 ```
 
-**Nota:** El thumbnail se genera autom√°ticamente con `https://img.youtube.com/vi/ID_DEL_VIDEO/maxresdefault.jpg`
+**El thumbnail se genera autom·ticamente** con:
+```
+https://img.youtube.com/vi/[ID_DEL_VIDEO]/maxresdefault.jpg
+```
+
+### ?? Actualizar InformaciÛn de Contacto
+
+En `js/config.js`, busca `contactInfo` (lÌnea ~110):
+
+```javascript
+const contactInfo = {
+    email: 'integrationbee@fiumsa.edu.bo',
+    phone: '+591 76543210',
+    address: 'Carrera de FÌsica, UMSA',
+    socialMedia: {
+        facebook: '#',
+        instagram: '#',
+        youtube: '#',
+        tiktok: '#'
+    }
+};
+```
+
+Reemplaza los `'#'` con las URLs reales de tus redes sociales.
 
 ---
 
-## üé® Personalizaci√≥n de Dise√±o
+## ?? PersonalizaciÛn de DiseÒo
 
-### Cambiar Colores
+**Archivo a editar:** `css/styles.css`
 
-Busca la secci√≥n `:root` en el CSS (aproximadamente l√≠nea 20):
+### ?? Cambiar Colores
+
+Busca la secciÛn `:root` (lÌnea ~10):
 
 ```css
 :root {
     /* Colores principales */
-    --color-primary: #FFB627;      /* Amarillo/dorado principal */
-    --color-secondary: #5DADE2;    /* Azul */
-    --color-accent: #F39C12;       /* Naranja */
-    --color-dark: #7D4E1A;         /* Marr√≥n oscuro */
-    --color-light: #FFF8E7;        /* Crema claro */
-    --color-white: #FFFFFF;        /* Blanco */
-    --color-text: #333333;         /* Texto oscuro */
-    --color-bg: #FFFBF0;           /* Fondo general */
+    --color-primary: #FFB627;      /* Amarillo/dorado - Color principal */
+    --color-secondary: #5DADE2;    /* Azul - Acentos y botones */
+    --color-accent: #F39C12;       /* Naranja - Hover effects */
+    --color-dark: #7D4E1A;         /* MarrÛn - Textos oscuros */
+    --color-light: #FFF8E7;        /* Crema - Fondos suaves */
+    --color-white: #FFFFFF;        /* Blanco puro */
+    --color-text: #333333;         /* Gris oscuro - Texto */
+    --color-bg: #FFFBF0;           /* Crema - Fondo general */
 }
 ```
 
-### Personalizar el Fondo de Ecuaciones
-
-El sitio web utiliza un **sistema de 3 capas** para el fondo:
-
-#### **Capa 1: Imagen de Ecuaciones (del certificado)**
-Busca `.equations-bg` en el CSS (aproximadamente l√≠nea 50):
-
-```css
-.equations-bg {
-    background-image: url('assets/images/equations-background.png');
-    background-size: 1200px auto;  /* Tama√±o del patr√≥n */
-    opacity: 0.035;                /* Intensidad (0.01-0.1) */
-    filter: brightness(1.15);      /* Brillo (0.8-1.5) */
-}
-```
-
-**Ajustes recomendados:**
-- **M√°s visible:** `opacity: 0.05`
-- **M√°s sutil:** `opacity: 0.02`
-- **Patr√≥n m√°s grande:** `background-size: 1500px auto`
-- **Patr√≥n m√°s peque√±o:** `background-size: 900px auto`
-- **M√°s claro:** `brightness(1.3)`
-- **M√°s oscuro:** `brightness(0.9)`
-
-#### **Capa 2: Hex√°gonos (panales)**
-```css
-.honeycomb-bg {
-    opacity: 0.02;  /* Muy sutil, complementa la capa 1 */
-}
-```
-
-#### **Capa 3: S√≠mbolos Flotantes**
-```css
-.math-symbol {
-    opacity: 0.08;  /* S√≠mbolos como ‚à´ dx ‚àÇ ‚àá */
-}
-```
-
-**Para cambiar la imagen de fondo:**
-1. Optimiza tu nueva imagen con TinyPNG
-2. Gu√°rdala como `assets/images/equations-background.png`
-3. Ajusta `opacity` y `background-size` seg√∫n necesites
-
-### Cambiar Tipograf√≠as
-
-Las tipograf√≠as se configuran f√°cilmente en la misma secci√≥n `:root`:
+**Ejemplo - Cambiar a tonos verdes:**
 
 ```css
 :root {
-    --font-primary: 'Poppins', 'Segoe UI', sans-serif;      /* Texto general */
-    --font-secondary: 'Montserrat', 'Arial', sans-serif;    /* Texto secundario */
-    --font-display: 'Fredoka One', 'Arial Black', sans-serif; /* T√≠tulos grandes */
+    --color-primary: #10B981;      /* Verde esmeralda */
+    --color-secondary: #3B82F6;    /* Azul */
+    --color-accent: #059669;       /* Verde oscuro */
+    --color-dark: #065F46;         /* Verde muy oscuro */
+    --color-light: #D1FAE5;        /* Verde muy claro */
+    --color-bg: #ECFDF5;           /* Fondo verde suave */
 }
 ```
 
-**Tipograf√≠as disponibles en Google Fonts:**
-- Poppins (moderna, limpia)
-- Montserrat (vers√°til)
-- Fredoka One (juguetona, para t√≠tulos)
-- Roboto (neutral, profesional)
-- Open Sans (legible)
-- Lato (elegante)
+### ?? Cambiar TipografÌas
 
-**Para cambiar a otra fuente:**
+En `css/styles.css`, lÌnea ~5:
+
+```css
+:root {
+    --font-primary: 'Poppins', 'Segoe UI', sans-serif;
+    --font-secondary: 'Montserrat', 'Arial', sans-serif;
+    --font-display: 'Fredoka One', 'Arial Black', sans-serif;
+}
+```
+
+**TipografÌas disponibles (ya importadas):**
+- `Poppins` - Moderna y limpia
+- `Montserrat` - Vers·til y profesional
+- `Fredoka One` - Juguetona para tÌtulos
+
+**Para usar otra fuente:**
 
 1. Ve a [Google Fonts](https://fonts.google.com/)
-2. Selecciona la fuente que te guste
-3. Copia el enlace de importaci√≥n
-4. Modifica la l√≠nea de `@import` en el CSS (l√≠nea 18)
-5. Cambia el nombre en las variables de `:root`
+2. Selecciona tu fuente favorita
+3. Clic en "Select this style"
+4. Copia el `@import` y pÈgalo en la lÌnea 18 de `styles.css`
+5. Actualiza las variables en `:root`
 
 **Ejemplo - Cambiar a Roboto:**
 
@@ -285,60 +431,123 @@ Las tipograf√≠as se configuran f√°cilmente en la misma secci√≥n `:root`:
 }
 ```
 
-### Cambiar el Logo
+### ??? Personalizar el Fondo de Ecuaciones
 
-El logo actual es un placeholder SVG. Para usar tu logo real:
+**?? IMPORTANTE:** El sitio utiliza una imagen de fondo con ecuaciones matem·ticas.
 
-**Opci√≥n 1 - Imagen local:**
+**UbicaciÛn:** `assets/images/equations-background.png`
+
+**Requisitos:**
+- Formato: PNG con fondo transparente
+- Peso: 200-400 KB (optimizada)
+- ResoluciÛn: 1280x900 px o similar
+- Contenido: Ecuaciones matem·ticas distribuidas uniformemente
+
+**Ajustar opacidad y tamaÒo:**
+
+En `css/styles.css`, busca `.equations-bg` (lÌnea ~60):
+
+```css
+.equations-bg {
+    background-image: url('assets/images/equations-background.png');
+    background-size: 1200px auto;  /* TamaÒo del patrÛn */
+    opacity: 0.05;                 /* Intensidad (0.02-0.1) */
+    filter: brightness(1.15);      /* Brillo (0.8-1.5) */
+}
+```
+
+**Ajustes recomendados:**
+- **M·s visible:** `opacity: 0.08`
+- **M·s sutil:** `opacity: 0.03`
+- **PatrÛn m·s grande:** `background-size: 1500px auto`
+- **PatrÛn m·s pequeÒo:** `background-size: 900px auto`
+
+**Si no tienes la imagen:**
+El sitio funcionar· sin problemas, simplemente no mostrar· el fondo de ecuaciones.
+
+### ?? Ajustar Elementos Decorativos
+
+**Hex·gonos (panal):**
+```css
+.honeycomb-bg {
+    opacity: 0.05;  /* Cambiar para m·s/menos visible */
+}
+```
+
+**SÌmbolos matem·ticos flotantes:**
+```css
+.math-symbol {
+    opacity: 0.08;  /* Cambiar para m·s/menos visible */
+}
+```
+
+### ?? Cambiar el Logo
+
+**OpciÛn 1 - Tienes un logo en PNG/SVG:**
+
+1. Guarda tu logo en `assets/images/logo.png`
+2. El sitio lo cargar· autom·ticamente
+
+**OpciÛn 2 - Cambiar manualmente:**
+
+En `index.html` y `galeria.html`, busca:
 ```html
-<!-- Busca esta l√≠nea (aprox. l√≠nea 550) -->
-<img src="data:image/svg+xml..." alt="Logo">
-
-<!-- Reempl√°zala con: -->
 <img src="assets/images/logo.png" alt="Logo Integration Bee">
 ```
 
-**Opci√≥n 2 - URL externa:**
+Reemplaza con tu URL:
 ```html
-<img src="https://tu-servidor.com/logo.png" alt="Logo Integration Bee">
+<img src="assets/images/mi-nuevo-logo.svg" alt="Logo Integration Bee">
 ```
-
-Haz lo mismo en las otras 2 apariciones del logo (navegaci√≥n y hero).
 
 ---
 
-## üöÄ Publicaci√≥n en GitHub Pages
+## ?? PublicaciÛn en GitHub Pages
 
-### Paso 1: Crear Repositorio en GitHub
+### ?? Requisitos Previos
 
-1. Ve a [GitHub](https://github.com) e inicia sesi√≥n
-2. Click en el bot√≥n **"New"** (nuevo repositorio)
-3. Nombra tu repositorio: `integration-bee-umsa`
-4. Marca como **Public** (p√∫blico)
-5. Click en **"Create repository"**
+- Cuenta en [GitHub](https://github.com)
+- Git instalado (opcional, se puede hacer desde la web)
+
+### Paso 1: Crear Repositorio
+
+1. Ve a https://github.com y crea una cuenta (si no tienes)
+2. Clic en el botÛn **"+"** (arriba derecha) ? **"New repository"**
+3. ConfiguraciÛn:
+   - **Repository name:** `integration-bee-umsa`
+   - **Description:** "Sitio web oficial del Integration Bee Physics UMSA"
+   - **Public** (marcado)
+   - ? **Add a README file** (opcional)
+4. Clic en **"Create repository"**
 
 ### Paso 2: Subir Archivos
 
-**Opci√≥n A - Desde la web (m√°s f√°cil):**
+**OpciÛn A - Desde la Web (M·s F·cil):**
 
-1. En tu repositorio, click en **"Add file"** ‚Üí **"Upload files"**
-2. Arrastra tu archivo `index.html` y la carpeta `assets/`
-3. Escribe un mensaje: "Versi√≥n inicial del sitio web"
-4. Click en **"Commit changes"**
+1. En tu repositorio, clic en **"Add file"** ? **"Upload files"**
+2. Arrastra TODOS tus archivos y carpetas:
+   ```
+   - index.html
+   - galeria.html
+   - css/ (carpeta completa)
+   - js/ (carpeta completa)
+   - assets/ (carpeta completa)
+   - README.md
+   - MANUAL.md
+   ```
+3. En "Commit changes":
+   - Mensaje: `VersiÛn inicial del sitio web`
+4. Clic en **"Commit changes"**
 
-**Opci√≥n B - Usando Git (terminal):**
+**OpciÛn B - Usando Git (Terminal):**
 
 ```bash
-# Inicializa el repositorio local
+# En la carpeta de tu proyecto:
 git init
-
-# Agrega todos los archivos
 git add .
+git commit -m "VersiÛn inicial del sitio web"
 
-# Haz el primer commit
-git commit -m "Versi√≥n inicial del sitio web"
-
-# Conecta con GitHub (reemplaza con tu URL)
+# Conecta con GitHub (reemplaza TU-USUARIO)
 git remote add origin https://github.com/TU-USUARIO/integration-bee-umsa.git
 
 # Sube los archivos
@@ -348,445 +557,506 @@ git push -u origin main
 
 ### Paso 3: Activar GitHub Pages
 
-1. En tu repositorio, ve a **Settings** (Configuraci√≥n)
-2. En el men√∫ lateral, busca **Pages**
-3. En **Source**, selecciona:
-   - Branch: `main`
-   - Folder: `/ (root)`
-4. Click en **Save**
-5. ¬°Espera 1-2 minutos!
+1. En tu repositorio, ve a **"Settings"** (?? ConfiguraciÛn)
+2. En el men˙ lateral, busca **"Pages"**
+3. En **"Build and deployment"**:
+   - **Source:** Deploy from a branch
+   - **Branch:** `main`
+   - **Folder:** `/ (root)`
+4. Clic en **"Save"**
+5. ? **Espera 1-3 minutos**
 
-Tu sitio estar√° disponible en:
+### Paso 4: Verificar
+
+Tu sitio estar· disponible en:
 ```
 https://TU-USUARIO.github.io/integration-bee-umsa/
 ```
 
-### Paso 4: Dominio Personalizado (Opcional)
+**Ejemplo:**
+Si tu usuario es `fisica-umsa`, la URL ser·:
+```
+https://fisica-umsa.github.io/integration-bee-umsa/
+```
 
-Si m√°s adelante compran un dominio:
+### ?? Dominio Personalizado (Opcional)
 
-1. En la configuraci√≥n de GitHub Pages, agrega tu dominio personalizado
-2. Configura los DNS de tu proveedor de dominio apuntando a:
+Si compran un dominio (ej: `integrationbee.com`):
+
+1. En GitHub Pages, agrega tu dominio en **"Custom domain"**
+2. En tu proveedor de dominio, configura estos DNS (A Records):
    ```
    185.199.108.153
    185.199.109.153
    185.199.110.153
    185.199.111.153
    ```
+3. Espera 24-48 horas para que se propague
 
 ---
 
-## üîß Mantenimiento y Actualizaci√≥n
+## ?? Mantenimiento y ActualizaciÛn
 
-### Actualizar Ganadores (despu√©s de cada torneo)
+### ?? DespuÈs de Cada Torneo
 
-1. Abre `index.html` en un editor de texto
-2. Busca `const websiteData = {`
-3. Agrega el nuevo ganador al array `winners`
-4. Guarda el archivo
-5. Sube los cambios a GitHub
+**Checklist de actualizaciÛn:**
 
-**Usando Git:**
-```bash
-git add index.html
-git commit -m "Actualizar ganadores torneo 2026"
-git push origin main
-```
+- [ ] Editar `js/config.js` con nuevos ganadores
+- [ ] Subir PDFs nuevos a `assets/pdfs/torneos/`
+- [ ] Actualizar `questionBanksData` con nuevos bancos
+- [ ] Subir fotos nuevas a Google Drive (galerÌa autom·tica)
+- [ ] Agregar videos a YouTube y actualizar `videosData`
+- [ ] Probar localmente
+- [ ] Subir cambios a GitHub
 
-### Agregar Nuevo Banco de Preguntas
-
-1. Sube el PDF a `assets/pdfs/`
-2. Edita `index.html` y agrega entrada en `questionBanks`
-3. Sube ambos archivos a GitHub
-
-### Actualizar Galer√≠a
-
-1. Sube las nuevas im√°genes a `assets/images/`
-2. Agrega las referencias en el array `gallery.photos`
-3. Para videos, solo necesitas el ID de YouTube
-
----
-
-## üêõ Soluci√≥n de Problemas
-
-### El PDF no se visualiza
-
-**Problema:** Al hacer clic en un banco de preguntas, el visor no muestra el PDF.
-
-**Soluciones:**
-1. Verifica que la ruta del PDF sea correcta
-2. Aseg√∫rate de que el PDF est√© p√∫blico en GitHub
-3. Prueba usando Google Drive como alternativa
-4. Verifica que el PDF no est√© protegido con contrase√±a
-
-### Las im√°genes no cargan
-
-**Problema:** Las fotos de la galer√≠a no se muestran.
-
-**Soluciones:**
-1. Verifica que las rutas sean correctas (respeta may√∫sculas/min√∫sculas)
-2. Aseg√∫rate de que las im√°genes est√©n en la carpeta `assets/images/`
-3. Comprueba que los archivos se hayan subido correctamente a GitHub
-4. Intenta usar rutas absolutas: `https://tu-usuario.github.io/repo/assets/images/foto.jpg`
-
-### El dise√±o se ve mal en m√≥vil
-
-**Problema:** La p√°gina no se adapta bien a pantallas peque√±as.
-
-**Soluci√≥n:**
-- El dise√±o es responsivo por defecto
-- Prueba limpiando la cach√© del navegador
-- Verifica que no hayas modificado los media queries del CSS
-
-### Los cambios no se reflejan en la p√°gina publicada
-
-**Problema:** Actualic√© el c√≥digo pero no veo los cambios en la web.
-
-**Soluciones:**
-1. GitHub Pages puede tardar 1-5 minutos en actualizar
-2. Limpia la cach√© del navegador (Ctrl + Shift + R)
-3. Verifica que los cambios se hayan subido correctamente a GitHub
-4. Prueba en modo inc√≥gnito
-
-### Error "404 - Page not found"
-
-**Problema:** Al acceder a la URL de GitHub Pages, aparece error 404.
-
-**Soluciones:**
-1. Verifica que el archivo se llame exactamente `index.html` (min√∫sculas)
-2. Aseg√∫rate de que est√© en la ra√≠z del repositorio (no en una subcarpeta)
-3. Revisa que GitHub Pages est√© activado en la configuraci√≥n
-4. Espera unos minutos, a veces tarda en activarse
-
----
-
-## üìû Contacto y Soporte
-
-Si tienes problemas o necesitas ayuda para mantener el sitio:
-
-1. **Revisa esta documentaci√≥n** primero
-2. **Busca en Google** el mensaje de error espec√≠fico
-3. **Consulta la documentaci√≥n de GitHub Pages:** https://docs.github.com/es/pages
-4. **Pide ayuda** a alguien con conocimientos de HTML/CSS/JavaScript
-
----
-
-## ‚úÖ Checklist de Publicaci√≥n
-
-Antes de publicar cambios, verifica:
-
-- [ ] Los datos est√°n actualizados en `websiteData`
-- [ ] Todos los PDFs est√°n subidos y las rutas son correctas
-- [ ] Las im√°genes est√°n optimizadas (no muy pesadas)
-- [ ] Has probado el sitio localmente (abriendo index.html en un navegador)
-- [ ] Los enlaces externos funcionan (redes sociales, videos de YouTube)
-- [ ] El sitio se ve bien en m√≥vil y desktop
-- [ ] Has hecho commit y push de todos los cambios
-
----
-
-## üéì Recursos Adicionales
-
-### Para aprender m√°s sobre las tecnolog√≠as usadas:
-
-- **HTML/CSS:** [MDN Web Docs](https://developer.mozilla.org/es/)
-- **JavaScript:** [JavaScript.info](https://javascript.info/)
-- **GitHub Pages:** [Documentaci√≥n oficial](https://docs.github.com/es/pages)
-- **Git:** [Git - La Gu√≠a Sencilla](https://rogerdudler.github.io/git-guide/index.es.html)
-
-### Herramientas √∫tiles:
-
-- **Editor de c√≥digo:** [Visual Studio Code](https://code.visualstudio.com/) (gratuito)
-- **Optimizar im√°genes:** [TinyPNG](https://tinypng.com/)
-- **Probar responsividad:** Usa las herramientas de desarrollador del navegador (F12)
-- **Colores:** [Coolors](https://coolors.co/) para generar paletas
-
----
-
-## üîÑ Separaci√≥n de Archivos (Futuro)
-
-### ¬øPor qu√© actualmente est√° todo en un archivo?
-
-El sitio web est√° dise√±ado como un **archivo HTML √∫nico** (`index.html`) por las siguientes razones:
-
-‚úÖ **Simplicidad:** Un solo archivo para actualizar y mantener
-‚úÖ **Sin problemas de rutas:** Todo est√° embebido, no hay conflictos
-‚úÖ **GitHub Pages friendly:** Sube un archivo y funciona inmediatamente
-‚úÖ **F√°cil de transferir:** Si dejas el proyecto, entregas un solo archivo
-‚úÖ **Sin problemas de cach√©:** El navegador siempre recarga todo
-‚úÖ **Portabilidad:** Puedes abrirlo localmente sin servidor
-
-### Cu√°ndo Considerar Separar en M√∫ltiples Archivos
-
-Deber√≠as separar el c√≥digo en archivos individuales (HTML, CSS, JS) cuando:
-
-#### 1. **El archivo crece demasiado**
-- Si `index.html` supera las **3000-4000 l√≠neas**
-- Se vuelve dif√≠cil encontrar secciones espec√≠ficas
-- El editor de c√≥digo se vuelve lento
-
-#### 2. **M√∫ltiples p√°ginas**
-```
-Si necesitas:
-- index.html (inicio)
-- competiciones.html (historial de competiciones)
-- resultados.html (resultados detallados)
-- inscripcion.html (formulario de inscripci√≥n)
-
-‚Üí Tiene sentido compartir un mismo styles.css entre todas
-```
-
-#### 3. **Trabajo en equipo simult√°neo**
-```
-Dise√±ador ‚Üí edita styles.css
-Programador ‚Üí edita script.js
-Editor de contenido ‚Üí edita index.html
-
-Sin separaci√≥n: todos editan el mismo archivo (conflictos)
-Con separaci√≥n: cada uno edita su archivo (sin conflictos)
-```
-
-#### 4. **Optimizaci√≥n de carga**
-```
-Si el sitio se vuelve lento:
-- Minificar CSS y JS por separado
-- Usar cach√© del navegador eficientemente
-- Cargar recursos de forma diferida (lazy loading)
-```
-
----
-
-## üöß Problemas Potenciales al Separar
-
-### Problema 1: Rutas Relativas
-**Qu√© pasa:**
-```html
-<!-- index.html -->
-<link rel="stylesheet" href="css/styles.css">
-<script src="js/script.js"></script>
-```
-
-Si la estructura de carpetas cambia, las rutas se rompen.
-
-**Soluci√≥n:**
-- Usa rutas consistentes desde la ra√≠z
-- Prueba siempre en un servidor local antes de publicar
-- Documenta claramente la estructura de carpetas
-
-### Problema 2: Cach√© del Navegador
-**Qu√© pasa:**
-```
-Usuario visita el sitio ‚Üí Navegador guarda styles.css
-Actualizas styles.css ‚Üí Usuario no ve cambios (usa versi√≥n antigua)
-```
-
-**Soluci√≥n:** Versionar los archivos
-```html
-<link rel="stylesheet" href="css/styles.css?v=1.2">
-<script src="js/script.js?v=1.2"></script>
-<!-- Cambia el n√∫mero de versi√≥n con cada actualizaci√≥n -->
-```
-
-### Problema 3: Errores CORS
-**Qu√© pasa:**
-Si abres `index.html` directamente (protocolo `file://`), JavaScript puede fallar al cargar archivos externos.
-
-**Soluci√≥n:**
-- Siempre prueba con un servidor local
-- Usa extensiones como "Live Server" en VS Code
-- O ejecuta: `python -m http.server 8000` en la carpeta del proyecto
-
-### Problema 4: Olvidar Subir Archivos
-**Qu√© pasa:**
-```bash
-git add index.html
-git commit -m "Actualizaci√≥n"
-git push
-# ‚ùå Olvidaste styles.css ‚Üí p√°gina se ve mal
-```
-
-**Soluci√≥n:**
-- Usa `git add .` para agregar todo
-- Haz checklist antes de cada commit
-- Revisa siempre con `git status`
-
-### Problema 5: Orden de Carga
-**Qu√© pasa:**
-JavaScript se ejecuta antes de que el HTML est√© listo.
-
-**Soluci√≥n:**
-```html
-<!-- Usa defer para que espere al HTML -->
-<script src="js/script.js" defer></script>
-
-<!-- O coloca los scripts al final del body -->
-<body>
-    <!-- HTML aqu√≠ -->
-    <script src="js/script.js"></script>
-</body>
-```
-
----
-
-## üìê Gu√≠a de Separaci√≥n (Cuando Sea Necesario)
-
-### Estructura Recomendada:
-
-```
-integration-bee-umsa/
-‚îÇ
-‚îú‚îÄ‚îÄ index.html              # Solo estructura HTML
-‚îú‚îÄ‚îÄ css/
-‚îÇ   ‚îî‚îÄ‚îÄ styles.css         # Todo el CSS
-‚îú‚îÄ‚îÄ js/
-‚îÇ   ‚îú‚îÄ‚îÄ config.js          # Datos (websiteData)
-‚îÇ   ‚îî‚îÄ‚îÄ main.js            # Funciones y l√≥gica
-‚îî‚îÄ‚îÄ assets/
-    ‚îú‚îÄ‚îÄ images/
-    ‚îÇ   ‚îú‚îÄ‚îÄ logo.png
-    ‚îÇ   ‚îî‚îÄ‚îÄ galeria/
-    ‚îî‚îÄ‚îÄ pdfs/
-        ‚îî‚îÄ‚îÄ torneos/
-```
-
-### Paso a Paso para Separar:
-
-#### **1. Extraer el CSS**
-
-**Crear:** `css/styles.css`
-
-Copia todo el contenido entre `<style>` y `</style>` de `index.html` y p√©galo en el nuevo archivo.
-
-**En index.html:**
-```html
-<head>
-    <!-- Elimina todo el <style>...</style> -->
-    <!-- Agrega esta l√≠nea: -->
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-```
-
-#### **2. Extraer los Datos**
-
-**Crear:** `js/config.js`
-
-```javascript
-// Copia el objeto websiteData de index.html
-const websiteData = {
-    winners: [...],
-    questionBanks: [...],
-    gallery: {...}
-};
-```
-
-#### **3. Extraer el JavaScript**
-
-**Crear:** `js/main.js`
-
-Copia todas las funciones de JavaScript de `index.html` (todo lo que est√° dentro de `<script>...</script>`).
-
-**En index.html:**
-```html
-<body>
-    <!-- Tu HTML aqu√≠ -->
-    
-    <!-- Al final del body: -->
-    <script src="js/config.js"></script>
-    <script src="js/main.js"></script>
-</body>
-```
-
-#### **4. Probar Localmente**
-
-**NO abras index.html directamente.** Usa un servidor local:
-
-**Opci√≥n A - Python:**
-```bash
-# En la carpeta del proyecto:
-python -m http.server 8000
-# Abre: http://localhost:8000
-```
-
-**Opci√≥n B - Node.js:**
-```bash
-npx http-server
-```
-
-**Opci√≥n C - VS Code:**
-- Instala extensi√≥n "Live Server"
-- Click derecho en index.html ‚Üí "Open with Live Server"
-
-#### **5. Verificar Todo Funciona**
-
-Checklist:
-- [ ] La p√°gina carga correctamente
-- [ ] Los estilos se aplican (colores, fuentes)
-- [ ] Los botones funcionan
-- [ ] El visor de PDF abre
-- [ ] La galer√≠a cambia entre fotos/videos
-- [ ] No hay errores en la consola (F12)
-
-#### **6. Actualizar Git**
+### ?? Flujo de ActualizaciÛn con Git
 
 ```bash
+# 1. Edita js/config.js
+# 2. Sube nuevos PDFs a assets/pdfs/torneos/
+# 3. Luego:
+
 git add .
-git commit -m "Refactorizar: separar HTML, CSS y JS"
+git commit -m "ActualizaciÛn post-torneo 2026"
+git push origin main
+
+# Espera 1-2 minutos y revisa tu sitio web
+```
+
+### ?? Actualizar GalerÌa
+
+**°S˙per f·cil!**
+
+1. Abre tu carpeta de Google Drive
+2. Sube las fotos nuevas
+3. °Listo! Aparecen autom·ticamente en la web
+
+**No necesitas editar cÛdigo ni subir a GitHub.**
+
+### ?? Agregar Nuevo Video
+
+1. Sube el video a YouTube
+2. Copia el ID del video
+3. Edita `js/config.js`:
+   ```javascript
+   videosData: [
+       // Videos existentes...
+       {
+           youtubeId: 'NUEVO_ID',
+           thumbnail: 'https://img.youtube.com/vi/NUEVO_ID/maxresdefault.jpg',
+           title: 'Nuevo Video'
+       }
+   ]
+   ```
+4. Sube a GitHub
+
+### ?? Actualizar Solo una P·gina
+
+**Si solo modificas `index.html` o `galeria.html`:**
+
+```bash
+git add index.html
+git commit -m "Actualizar texto en p·gina principal"
 git push origin main
 ```
 
-#### **7. Verificar en GitHub Pages**
+**Si solo modificas estilos:**
 
-- Espera 2-5 minutos
-- Visita tu URL de GitHub Pages
-- Verifica que todo funcione online
-- Prueba en m√≥vil
-
----
-
-## üìä Comparaci√≥n: Archivo √önico vs Separado
-
-| Aspecto | Archivo √önico | Archivos Separados |
-|---------|---------------|-------------------|
-| **Facilidad de edici√≥n** | ‚≠ê‚≠ê‚≠ê‚≠ê‚≠ê Todo en un lugar | ‚≠ê‚≠ê‚≠ê Buscar entre archivos |
-| **Trabajo en equipo** | ‚≠ê‚≠ê Conflictos si editan juntos | ‚≠ê‚≠ê‚≠ê‚≠ê‚≠ê Sin conflictos |
-| **Velocidad de carga** | ‚≠ê‚≠ê‚≠ê‚≠ê Una sola petici√≥n | ‚≠ê‚≠ê‚≠ê M√∫ltiples peticiones |
-| **Organizaci√≥n** | ‚≠ê‚≠ê‚≠ê Bien hasta 3000 l√≠neas | ‚≠ê‚≠ê‚≠ê‚≠ê‚≠ê Muy organizado |
-| **Reutilizaci√≥n** | ‚≠ê Dif√≠cil compartir estilos | ‚≠ê‚≠ê‚≠ê‚≠ê‚≠ê F√°cil reutilizar |
-| **Mantenimiento** | ‚≠ê‚≠ê‚≠ê‚≠ê Simple para una persona | ‚≠ê‚≠ê‚≠ê‚≠ê Requiere coordinaci√≥n |
-| **Problemas t√©cnicos** | ‚≠ê‚≠ê‚≠ê‚≠ê‚≠ê Casi ninguno | ‚≠ê‚≠ê‚≠ê CORS, cach√©, rutas |
+```bash
+git add css/styles.css
+git commit -m "Cambiar colores a tonos verdes"
+git push origin main
+```
 
 ---
 
-## üéØ Recomendaci√≥n Final
+## ?? SoluciÛn de Problemas
 
-### **Mant√©n el archivo √∫nico mientras:**
-- El proyecto sea mantenido por 1-2 personas
-- El archivo sea menor a 3000 l√≠neas
-- Solo tengas una p√°gina (index.html)
-- Las actualizaciones sean espor√°dicas (despu√©s de cada torneo)
+### ? Las im·genes de Google Drive no cargan
 
-### **Considera separar cuando:**
-- El equipo crezca a 3+ personas editando simult√°neamente
-- El archivo supere las 4000 l√≠neas
-- Agreguen m√∫ltiples p√°ginas HTML
-- Necesiten optimizaciones de rendimiento avanzadas
-- El sitio requiera actualizaci√≥n de contenido muy frecuente
+**SÌntomas:**
+- La galerÌa muestra "Cargando..." eternamente
+- Aparece "Error al cargar im·genes"
+- Contador dice "0 im·genes"
+
+**Verificar:**
+
+1. **URL del script correcta:**
+   - Abre `js/config.js`
+   - Verifica que `GOOGLE_SCRIPT_URL` tenga la URL completa del Apps Script
+   - Debe terminar en `/exec`
+
+2. **Script publicado correctamente:**
+   - Ve a script.google.com
+   - Abre tu proyecto
+   - Clic en "Implementar" ? "Administrar implementaciones"
+   - Verifica que diga "Cualquier persona" en acceso
+
+3. **Carpeta de Drive p˙blica:**
+   - Abre la carpeta en Drive
+   - Clic derecho ? Compartir
+   - Debe estar en "Cualquier persona con el enlace"
+
+4. **Hay im·genes en la carpeta:**
+   - Verifica que haya archivos JPG, PNG o GIF
+   - Los archivos deben ser im·genes v·lidas
+
+**Probar manualmente:**
+1. Copia la URL de `GOOGLE_SCRIPT_URL`
+2. PÈgala en tu navegador
+3. DeberÌas ver un JSON con tus im·genes:
+   ```json
+   {
+     "success": true,
+     "images": [...],
+     "total": 35
+   }
+   ```
+
+Si ves esto, el script funciona. Si no:
+- Revisa permisos del script
+- Revisa que el ID de la carpeta sea correcto
+
+### ? El PDF no se visualiza
+
+**Problema:** Al hacer clic en un banco de preguntas, el visor est· en blanco.
+
+**Soluciones:**
+
+1. **Verifica la ruta del PDF:**
+   ```javascript
+   // En config.js
+   pdfUrl: "assets/pdfs/torneos/mi-archivo.pdf"  // ? Correcto
+   pdfUrl: "assets/pdfs/mi-archivo.pdf"          // ? Falta /torneos/
+   ```
+
+2. **Archivo subido a GitHub:**
+   - Ve a tu repositorio en GitHub
+   - Navega a `assets/pdfs/torneos/`
+   - Verifica que el PDF estÈ ahÌ
+
+3. **Usa Google Drive como alternativa:**
+   ```javascript
+   pdfUrl: "https://drive.google.com/uc?export=view&id=TU_ID_AQUI"
+   ```
+
+4. **PDF no protegido:**
+   - El PDF no debe tener contraseÒa
+   - Debe permitir visualizaciÛn
+
+### ? Las im·genes locales no cargan
+
+**Problema:** Las fotos en `assets/images/` no se ven.
+
+**Causas comunes:**
+
+1. **Rutas incorrectas:**
+   ```html
+   <!-- ? Incorrecto -->
+   <img src="/assets/images/logo.png">
+   
+   <!-- ? Correcto -->
+   <img src="assets/images/logo.png">
+   ```
+
+2. **Nombres con may˙sculas:**
+   - GitHub Pages es case-sensitive
+   - `logo.PNG` ? `logo.png`
+   - Usa siempre min˙sculas
+
+3. **Archivo no subido:**
+   - Verifica en GitHub que el archivo exista
+   - Aseg˙rate de haberlo incluido en el commit
+
+### ? Los cambios no se reflejan en la p·gina
+
+**Problema:** ActualicÈ el cÛdigo pero la web sigue igual.
+
+**Soluciones:**
+
+1. **Esperar propagaciÛn:**
+   - GitHub Pages tarda 1-5 minutos en actualizar
+   - SÈ paciente
+
+2. **Limpiar cachÈ:**
+   - Presiona `Ctrl + Shift + R` (Windows/Linux)
+   - Presiona `Cmd + Shift + R` (Mac)
+   - O abre en modo incÛgnito
+
+3. **Verificar que se subiÛ:**
+   ```bash
+   git status  # Ver quÈ archivos han cambiado
+   git add .   # Agregar todos
+   git push    # Subir a GitHub
+   ```
+
+4. **Revisar errores:**
+   - Presiona `F12` en el navegador
+   - Ve a la pestaÒa "Console"
+   - Busca mensajes de error en rojo
+
+### ? Error "404 - Page not found"
+
+**Problema:** La URL de GitHub Pages da error 404.
+
+**Soluciones:**
+
+1. **Nombre del archivo:**
+   - Debe llamarse exactamente `index.html`
+   - No `Index.html` ni `INDEX.html`
+
+2. **UbicaciÛn del archivo:**
+   - Debe estar en la raÌz del repositorio
+   - No dentro de una subcarpeta
+
+3. **GitHub Pages activado:**
+   - Ve a Settings ? Pages
+   - Verifica que estÈ configurado en "main" y "/ (root)"
+
+4. **Esperar activaciÛn:**
+   - Primera vez puede tardar 10 minutos
+   - Refresca la p·gina de Settings ? Pages
+   - Debe aparecer un banner verde: "Your site is published at..."
+
+### ? El diseÒo se ve mal en mÛvil
+
+**Problema:** La p·gina no se adapta a pantallas pequeÒas.
+
+**Verificar:**
+
+1. **Meta viewport presente:**
+   - En `index.html` y `galeria.html`
+   - Debe estar en `<head>`:
+   ```html
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   ```
+
+2. **CSS carg·ndose:**
+   - Abre `F12` ? PestaÒa "Network"
+   - Busca `styles.css`
+   - Debe aparecer con status 200 (verde)
+
+3. **Prueba en diferentes dispositivos:**
+   - Usa las herramientas de desarrollador (`F12`)
+   - Clic en el Ìcono de mÛvil
+   - Prueba diferentes tamaÒos
+
+### ? Los colores no cambian
+
+**Problema:** EditÈ las variables CSS pero no se ven cambios.
+
+**Causas:**
+
+1. **CachÈ del navegador:**
+   - Limpia cachÈ: `Ctrl + Shift + R`
+
+2. **Editaste el archivo equivocado:**
+   - Aseg˙rate de editar `css/styles.css`
+   - No `index.html` (ese ya no tiene estilos embebidos)
+
+3. **Sintaxis incorrecta:**
+   ```css
+   /* ? Incorrecto */
+   --color-primary #FFB627;
+   
+   /* ? Correcto */
+   --color-primary: #FFB627;
+   ```
+
+4. **No guardaste el archivo:**
+   - Verifica que hayas guardado `styles.css`
+   - S˙belo a GitHub
 
 ---
 
-## üìù Historial de Cambios
+## ?? Recursos Adicionales
 
-### Versi√≥n 1.0 (Noviembre 2025)
-- ‚úÖ Dise√±o inicial completado
-- ‚úÖ Sistema de ganadores implementado
-- ‚úÖ Banco de preguntas con visor de PDF
-- ‚úÖ Galer√≠a de fotos y videos
-- ‚úÖ Dise√±o responsivo
-- ‚úÖ Animaciones y elementos interactivos
-- ‚úÖ Documentaci√≥n de separaci√≥n de archivos
+### ?? Para Aprender M·s
+
+**TecnologÌas del sitio:**
+- [MDN Web Docs](https://developer.mozilla.org/es/) - HTML, CSS, JavaScript
+- [JavaScript.info](https://javascript.info/) - Tutorial completo de JS
+- [CSS-Tricks](https://css-tricks.com/) - Trucos y guÌas de CSS
+
+**GitHub y Git:**
+- [GitHub Docs](https://docs.github.com/es) - DocumentaciÛn oficial
+- [Git - GuÌa Sencilla](https://rogerdudler.github.io/git-guide/index.es.html)
+- [GitHub Pages Docs](https://docs.github.com/es/pages)
+
+**Google Apps Script:**
+- [Google Apps Script Docs](https://developers.google.com/apps-script)
+- [Drive API Reference](https://developers.google.com/drive/api/v3/reference)
+
+### ?? Herramientas ⁄tiles
+
+**Editores de cÛdigo:**
+- [Visual Studio Code](https://code.visualstudio.com/) - Editor gratuito (recomendado)
+- [Sublime Text](https://www.sublimetext.com/) - Ligero y r·pido
+- [Atom](https://atom.io/) - Hackeable
+
+**OptimizaciÛn:**
+- [TinyPNG](https://tinypng.com/) - Comprimir im·genes
+- [Compressor.io](https://compressor.io/) - Optimizar im·genes
+- [PageSpeed Insights](https://pagespeed.web.dev/) - Analizar rendimiento
+
+**DiseÒo:**
+- [Coolors](https://coolors.co/) - Generador de paletas de colores
+- [Google Fonts](https://fonts.google.com/) - Fuentes gratuitas
+- [Font Awesome](https://fontawesome.com/) - Õconos (si quieres agregar)
+
+**Testing:**
+- [BrowserStack](https://www.browserstack.com/) - Probar en diferentes dispositivos
+- Chrome DevTools (`F12`) - Herramientas de desarrollador
+
+### ?? Tutoriales Recomendados
+
+**Para principiantes:**
+1. [Codecademy - Learn HTML](https://www.codecademy.com/learn/learn-html)
+2. [freeCodeCamp - Responsive Web Design](https://www.freecodecamp.org/)
+3. [W3Schools](https://www.w3schools.com/) - Referencia r·pida
+
+**Para nivel intermedio:**
+1. [JavaScript30](https://javascript30.com/) - 30 proyectos en 30 dÌas
+2. [CSS Grid Garden](https://cssgridgarden.com/) - Aprender Grid jugando
+3. [Flexbox Froggy](https://flexboxfroggy.com/) - Aprender Flexbox jugando
 
 ---
 
-**¬°√âxito con tu proyecto Integration Bee Physics! üêù‚ú®**
+## ? Checklist de PublicaciÛn
 
-*√öltima actualizaci√≥n: Noviembre 2025*
+Antes de publicar cambios importantes, verifica:
+
+### Contenido
+- [ ] Ganadores actualizados en `js/config.js`
+- [ ] Bancos de preguntas con URLs correctas
+- [ ] PDFs subidos y accesibles
+- [ ] Google Drive configurado correctamente
+- [ ] Videos de YouTube con IDs correctos
+- [ ] InformaciÛn de contacto actualizada
+
+### Archivos
+- [ ] Todas las im·genes est·n en `assets/images/`
+- [ ] Todos los PDFs est·n en `assets/pdfs/torneos/`
+- [ ] Logo actualizado (si cambiÛ)
+- [ ] Imagen de fondo `equations-background.png` presente
+
+### CÛdigo
+- [ ] Sin errores en la consola del navegador (`F12`)
+- [ ] Todos los enlaces funcionan
+- [ ] PDFs se visualizan correctamente
+- [ ] GalerÌa carga fotos de Google Drive
+- [ ] Videos de YouTube se reproducen
+
+### Responsive
+- [ ] Se ve bien en mÛvil (< 768px)
+- [ ] Se ve bien en tablet (768px - 1024px)
+- [ ] Se ve bien en desktop (> 1024px)
+- [ ] NavegaciÛn funciona en mÛvil
+
+### Git/GitHub
+- [ ] Cambios guardados localmente
+- [ ] `git add .` ejecutado
+- [ ] `git commit -m "mensaje descriptivo"`
+- [ ] `git push origin main`
+- [ ] Esperado 2-3 minutos
+- [ ] Revisado en la URL p˙blica
+
+---
+
+## ?? Soporte
+
+### Orden de SoluciÛn de Problemas
+
+1. ? **Revisa este manual** - La mayorÌa de problemas est·n documentados
+2. ? **Revisa la consola** - Presiona `F12` ? PestaÒa "Console"
+3. ? **Busca en Google** - Copia el mensaje de error exacto
+4. ? **Revisa la documentaciÛn oficial:**
+   - [GitHub Pages](https://docs.github.com/es/pages)
+   - [Google Apps Script](https://developers.google.com/apps-script)
+5. ? **Pregunta en foros:**
+   - [Stack Overflow](https://stackoverflow.com/)
+   - [GitHub Community](https://github.community/)
+
+### Contacto del Proyecto
+
+Si este manual no resuelve tu problema:
+- ?? Email: [Tu email de contacto tÈcnico]
+- ?? Grupo interno: [Link a WhatsApp/Telegram del equipo]
+
+---
+
+## ?? Historial de Versiones
+
+### VersiÛn 2.0 (Enero 2026)
+- ? **Arquitectura modular** - Archivos separados (HTML, CSS, JS)
+- ? **GalerÌa autom·tica** - IntegraciÛn con Google Drive API
+- ? **P·gina de galerÌa** - `galeria.html` independiente
+- ? **ConfiguraciÛn centralizada** - Todo editable en `config.js`
+- ? **CSS compartido** - Un solo archivo de estilos
+- ? **JavaScript modular** - Separado por funcionalidad
+- ? **DocumentaciÛn actualizada** - Manual completo
+
+### VersiÛn 1.01 (Enero 2026)
+- ActualizaciÛn de ganadores gestiÛn 2025
+- ActualizaciÛn de bancos de preguntas 2025
+- ActualizaciÛn de galerÌa de fotos 2025
+
+### VersiÛn 1.0 (Noviembre 2025)
+- DiseÒo inicial completado
+- Sistema de ganadores
+- Banco de preguntas con visor de PDF
+- GalerÌa b·sica de fotos y videos
+- DiseÒo responsivo
+- Animaciones y elementos interactivos
+
+---
+
+## ?? Consejos Finales
+
+### Para Mantenimiento a Largo Plazo
+
+1. **Documenta cambios importantes:**
+   ```bash
+   git commit -m "Agregar torneo 2026 con 60 problemas nuevos"
+   # Mejor que:
+   git commit -m "actualizaciÛn"
+   ```
+
+2. **Haz copias de seguridad:**
+   - El repositorio de GitHub ya es un backup
+   - Descarga una copia local cada semestre
+
+3. **Usa branches para cambios grandes:**
+   ```bash
+   git checkout -b rediseno-2027
+   # Haz cambios...
+   git push origin rediseno-2027
+   # Prueba online antes de fusionar con main
+   ```
+
+4. **MantÈn el manual actualizado:**
+   - Si agregas funcionalidades nuevas, documÈntalas aquÌ
+   - Incluye capturas de pantalla si es ˙til
+
+5. **Comparte conocimiento:**
+   - EnseÒa a otros del equipo a actualizar el sitio
+   - No dejes que una sola persona sepa todo
+
+---
+
+## ?? °Felicidades!
+
+Has completado la documentaciÛn del sitio web Integration Bee Physics UMSA.
+
+**Recuerda:**
+- ?? Todo el contenido se edita en `js/config.js`
+- ?? Los estilos se cambian en `css/styles.css`
+- ?? La galerÌa se actualiza subiendo fotos a Google Drive
+- ?? Los cambios se publican con `git push`
+
+**°Buena suerte con el proyecto! ???**
+
+---
+
+*⁄ltima actualizaciÛn: Enero 2026 - VersiÛn 2.0*
+*Mantenido por: Integration Bee Physics UMSA*
