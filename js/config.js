@@ -50,7 +50,7 @@ const questionBanksData = [
         type: "1° etapa de clasificación",
         edition: "Primera Edición",
         problems: 7,
-        pdfUrl: "https://github.com/dj-t4b/integration-bee-physics/blob/master/assets/pdfs/torneos/integration_bee/1_examen.pdf" // Reemplazar con la URL real del PDF
+        pdfUrl: "https://drive.google.com/file/d/12kcWv2GtY_Y080Tx4Uj9ZWtPVxhlXjez/view?usp=drive_link" // Reemplazar con la URL real del PDF
     },
     {
         year: 2025,
@@ -58,7 +58,7 @@ const questionBanksData = [
         type: "2° etapa de clasificación",
         edition: "Primera Edición",
         problems: 21,
-        pdfUrl: "https://github.com/dj-t4b/integration-bee-physics/blob/master/assets/pdfs/torneos/integration_bee/2_clasificacion.pdf" // Reemplazar con la URL real del PDF
+        pdfUrl: "https://drive.google.com/file/d/1dtyz3zfoz4kA9ufsp3VJ16-55BHjVDAP/view?usp=drive_link" // Reemplazar con la URL real del PDF
     },
     {
         year: 2025,
@@ -66,7 +66,7 @@ const questionBanksData = [
         type: "Problemas de Muerte Súbita",
         edition: "Primera Edición",
         problems: 11,
-        pdfUrl: "https://github.com/dj-t4b/integration-bee-physics/blob/master/assets/pdfs/torneos/integration_bee/6_muerte_subita.pdf" // Reemplazar con la URL real del PDF
+        pdfUrl: "https://drive.google.com/file/d/1KmvUx5nQafTUIMz8Lh5tX7nUvLIKIk0e/view?usp=drive_link" // Reemplazar con la URL real del PDF
     },
     {
         year: 2025,
@@ -74,7 +74,7 @@ const questionBanksData = [
         type: "Octavos de final",
         edition: "Primera Edición",
         problems: 12,
-        pdfUrl: "https://github.com/dj-t4b/integration-bee-physics/blob/master/assets/pdfs/torneos/integration_bee/3_octavos.pdf" // Reemplazar con la URL real del PDF
+        pdfUrl: "https://drive.google.com/file/d/1VFGzz2Me_uf2qFSr8SkjghoTYBDPpuAu/view?usp=drive_link" // Reemplazar con la URL real del PDF
     },
     {
         year: 2025,
@@ -82,7 +82,7 @@ const questionBanksData = [
         type: "Cuartos de final",
         edition: "Primera Edición",
         problems: 12,
-        pdfUrl: "https://github.com/dj-t4b/integration-bee-physics/blob/master/assets/pdfs/torneos/integration_bee/4_cuartos.pdf" // Reemplazar con la URL real del PDF
+        pdfUrl: "https://drive.google.com/file/d/1e3Mr6B7ilcoSdEjIsprus10YE0jf5w9T/view?usp=drive_link" // Reemplazar con la URL real del PDF
     },
     {
         year: 2025,
@@ -90,7 +90,7 @@ const questionBanksData = [
         type: " Semifinal",
         edition: "Primera Edición",
         problems: 3,
-        pdfUrl: "https://github.com/dj-t4b/integration-bee-physics/blob/master/assets/pdfs/torneos/integration_bee/5_semifinal.pdf" // Reemplazar con la URL real del PDF
+        pdfUrl: "https://drive.google.com/file/d/1DQkEI7TeL_nU2u38z81mjwXaEM7o0r-i/view?usp=drive_link" // Reemplazar con la URL real del PDF
     },
     {
         year: 2025,
@@ -98,7 +98,7 @@ const questionBanksData = [
         type: "Final",
         edition: "Primera Edición",
         problems: 6,
-        pdfUrl: "https://github.com/dj-t4b/integration-bee-physics/blob/master/assets/pdfs/torneos/integration_bee/7_final.pdf" // Reemplazar con la URL real del PDF
+        pdfUrl: "https://drive.google.com/file/d/1JtuZhossbmE4J7N0-8kBu776ie3OabR5/view?usp=drive_link" // Reemplazar con la URL real del PDF
     }
     // Agregar más bancos de preguntas aquí
 ];
