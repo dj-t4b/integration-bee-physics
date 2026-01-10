@@ -1,38 +1,38 @@
-# ?? DocumentaciÛn - Integration Bee Physics UMSA
+# ?? Documentaci√≥n - Integration Bee Physics UMSA
 
-## ?? Õndice
-1. [IntroducciÛn](#introducciÛn)
+## ?? √çndice
+1. [Introducci√≥n](#introducci√≥n)
 2. [Estructura del Proyecto](#estructura-del-proyecto)
-3. [ConfiguraciÛn de Google Drive API](#configuraciÛn-de-google-drive-api)
-4. [ConfiguraciÛn de Contenido](#configuraciÛn-de-contenido)
-5. [PersonalizaciÛn de DiseÒo](#personalizaciÛn-de-diseÒo)
-6. [PublicaciÛn en GitHub Pages](#publicaciÛn-en-github-pages)
-7. [Mantenimiento y ActualizaciÛn](#mantenimiento-y-actualizaciÛn)
-8. [SoluciÛn de Problemas](#soluciÛn-de-problemas)
+3. [Configuraci√≥n de Google Drive API](#configuraci√≥n-de-google-drive-api)
+4. [Configuraci√≥n de Contenido](#configuraci√≥n-de-contenido)
+5. [Personalizaci√≥n de Dise√±o](#personalizaci√≥n-de-dise√±o)
+6. [Publicaci√≥n en GitHub Pages](#publicaci√≥n-en-github-pages)
+7. [Mantenimiento y Actualizaci√≥n](#mantenimiento-y-actualizaci√≥n)
+8. [Soluci√≥n de Problemas](#soluci√≥n-de-problemas)
 9. [Recursos Adicionales](#recursos-adicionales)
 
 ---
 
-## ?? IntroducciÛn
+## ?? Introducci√≥n
 
-Este sitio web fue diseÒado para el grupo **Integration Bee Physics** de la UMSA. Es una p·gina moderna, responsiva y f·cil de actualizar que incluye:
+Este sitio web fue dise√±ado para el grupo **Integration Bee Physics** de la UMSA. Es una p√°gina moderna, responsiva y f√°cil de actualizar que incluye:
 
-- ? SecciÛn de ˙ltimos ganadores
+- ? Secci√≥n de √∫ltimos ganadores
 - ? Banco de preguntas con visor de PDFs
-- ? **GalerÌa autom·tica con Google Drive**
+- ? **Galer√≠a autom√°tica con Google Drive**
 - ? Videos de YouTube integrados
-- ? SecciÛn "Sobre Nosotros"
-- ? DiseÒo responsivo (mÛvil, tablet, desktop)
-- ? Animaciones sutiles y tem·tica de abejas
-- ? TipografÌas intercambiables
+- ? Secci√≥n "Sobre Nosotros"
+- ? Dise√±o responsivo (m√≥vil, tablet, desktop)
+- ? Animaciones sutiles y tem√°tica de abejas
+- ? Tipograf√≠as intercambiables
 
-### ?? VersiÛn 2.0 - Arquitectura Modular
+### ?? Versi√≥n 2.0 - Arquitectura Modular
 
-Esta versiÛn utiliza una **estructura modular** con archivos separados:
-- ?? **HTML separado** - P·ginas limpias y f·ciles de leer
+Esta versi√≥n utiliza una **estructura modular** con archivos separados:
+- ?? **HTML separado** - P√°ginas limpias y f√°ciles de leer
 - ?? **CSS compartido** - Un solo archivo de estilos
-- ?? **JavaScript modular** - CÛdigo organizado por funcionalidad
-- ?? **ConfiguraciÛn centralizada** - Datos en un solo lugar
+- ?? **JavaScript modular** - C√≥digo organizado por funcionalidad
+- ?? **Configuraci√≥n centralizada** - Datos en un solo lugar
 
 ---
 
@@ -40,54 +40,54 @@ Esta versiÛn utiliza una **estructura modular** con archivos separados:
 
 ```
 integration-bee-physics/
-¶
-+-- index.html                # P·gina principal
-+-- galeria.html              # P·gina de galerÌa (Google Drive)
-¶
+¬¶
++-- index.html                # P√°gina principal
++-- galeria.html              # P√°gina de galer√≠a (Google Drive)
+¬¶
 +-- css/
-¶   +-- styles.css            # Estilos compartidos (ambas p·ginas)
-¶
+¬¶   +-- styles.css            # Estilos compartidos (ambas p√°ginas)
+¬¶
 +-- js/
-¶   +-- config.js             # ?? ConfiguraciÛn y datos (EDITAR AQUÕ)
-¶   +-- main.js               # LÛgica de index.html
-¶   +-- gallery.js            # LÛgica de galerÌa (Google Drive)
-¶
+¬¶   +-- config.js             # ?? Configuraci√≥n y datos (EDITAR AQU√ç)
+¬¶   +-- main.js               # L√≥gica de index.html
+¬¶   +-- gallery.js            # L√≥gica de galer√≠a (Google Drive)
+¬¶
 +-- assets/
-¶   +-- images/
-¶   ¶   +-- logo.png
-¶   ¶   +-- miembros.jpg
-¶   ¶   +-- equations-background.png  # ?? IMPORTANTE: Fondo matem·tico
-¶   +-- pdfs/
-¶       +-- torneos/          # Bancos de preguntas en PDF
-¶
-+-- README.md                 # Instrucciones r·pidas
-+-- MANUAL.md                 # Esta documentaciÛn completa
+¬¶   +-- images/
+¬¶   ¬¶   +-- logo.png
+¬¶   ¬¶   +-- miembros.jpg
+¬¶   ¬¶   +-- equations-background.png  # ?? IMPORTANTE: Fondo matem√°tico
+¬¶   +-- pdfs/
+¬¶       +-- torneos/          # Bancos de preguntas en PDF
+¬¶
++-- README.md                 # Instrucciones r√°pidas
++-- MANUAL.md                 # Esta documentaci√≥n completa
 ```
 
-### ?? DescripciÛn de Archivos Principales
+### ?? Descripci√≥n de Archivos Principales
 
-| Archivo | PropÛsito | Cu·ndo Editar |
+| Archivo | Prop√≥sito | Cu√°ndo Editar |
 |---------|-----------|---------------|
-| **index.html** | Estructura de la p·gina principal | Raramente (solo cambios estructurales) |
-| **galeria.html** | Estructura de la p·gina de galerÌa | Raramente |
-| **css/styles.css** | Todos los estilos visuales | Para cambiar colores, fuentes, diseÒo |
-| **js/config.js** | ? Datos editables (ganadores, preguntas, videos) | **Frecuentemente** (despuÈs de cada torneo) |
-| **js/main.js** | Funcionalidad de index.html | Raramente (solo mejoras tÈcnicas) |
-| **js/gallery.js** | ConexiÛn con Google Drive | Raramente (solo configuraciÛn inicial) |
+| **index.html** | Estructura de la p√°gina principal | Raramente (solo cambios estructurales) |
+| **galeria.html** | Estructura de la p√°gina de galer√≠a | Raramente |
+| **css/styles.css** | Todos los estilos visuales | Para cambiar colores, fuentes, dise√±o |
+| **js/config.js** | ? Datos editables (ganadores, preguntas, videos) | **Frecuentemente** (despu√©s de cada torneo) |
+| **js/main.js** | Funcionalidad de index.html | Raramente (solo mejoras t√©cnicas) |
+| **js/gallery.js** | Conexi√≥n con Google Drive | Raramente (solo configuraci√≥n inicial) |
 
 ---
 
-## ?? ConfiguraciÛn de Google Drive API
+## ?? Configuraci√≥n de Google Drive API
 
-La galerÌa carga im·genes autom·ticamente desde Google Drive usando Google Apps Script.
+La galer√≠a carga im√°genes autom√°ticamente desde Google Drive usando Google Apps Script.
 
 ### ?? Paso 1: Crear el Google Apps Script
 
 1. Ve a: **https://script.google.com**
 2. Clic en **"Nuevo proyecto"**
 3. Nombra el proyecto: **"Integration Bee Gallery API"**
-4. Borra todo el cÛdigo predeterminado
-5. Pega este cÛdigo:
+4. Borra todo el c√≥digo predeterminado
+5. Pega este c√≥digo:
 
 ```javascript
 function doGet(e) {
@@ -101,7 +101,7 @@ function doGet(e) {
     const file = files.next();
     const mimeType = file.getMimeType();
     
-    // Solo im·genes
+    // Solo im√°genes
     if (mimeType.indexOf('image') !== -1) {
       images.push({
         name: file.getName(),
@@ -112,7 +112,7 @@ function doGet(e) {
     }
   }
   
-  // Ordenar por fecha (m·s recientes primero)
+  // Ordenar por fecha (m√°s recientes primero)
   images.sort((a, b) => new Date(b.date) - new Date(a.date));
   
   const output = ContentService.createTextOutput(JSON.stringify({
@@ -126,18 +126,18 @@ function doGet(e) {
 }
 ```
 
-6. Clic en **?? Guardar** (Ìcono de diskette)
+6. Clic en **?? Guardar** (√≠cono de diskette)
 
 ### ?? Paso 2: Publicar el Script
 
-1. Clic en **"Implementar"** ? **"Nueva implementaciÛn"**
-2. En "Seleccionar tipo", clic en el ?? y elige: **"AplicaciÛn web"**
-3. ConfiguraciÛn:
-   - **DescripciÛn:** "API para galerÌa Integration Bee"
+1. Clic en **"Implementar"** ? **"Nueva implementaci√≥n"**
+2. En "Seleccionar tipo", clic en el ?? y elige: **"Aplicaci√≥n web"**
+3. Configuraci√≥n:
+   - **Descripci√≥n:** "API para galer√≠a Integration Bee"
    - **Ejecutar como:** Tu cuenta
-   - **QuiÈn tiene acceso:** **Cualquier persona** ?? (Importante)
+   - **Qui√©n tiene acceso:** **Cualquier persona** ?? (Importante)
 4. Clic en **"Implementar"**
-5. Aparecer· una ventana de permisos:
+5. Aparecer√° una ventana de permisos:
    - Clic en **"Autorizar acceso"**
    - Selecciona tu cuenta de Google
    - Clic en **"Avanzado"** ? **"Ir a [nombre del proyecto] (no seguro)"**
@@ -163,11 +163,11 @@ function doGet(e) {
 ### ?? Paso 4: Actualizar config.js
 
 1. Abre el archivo `js/config.js` en tu editor de texto
-2. Busca esta lÌnea (aproximadamente lÌnea 10):
+2. Busca esta l√≠nea (aproximadamente l√≠nea 10):
    ```javascript
    const GOOGLE_SCRIPT_URL = 'TU_URL_DEL_GOOGLE_APPS_SCRIPT_AQUI';
    ```
-3. Reempl·zala con tu URL real:
+3. Reempl√°zala con tu URL real:
    ```javascript
    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz...ABC123.../exec';
    ```
@@ -176,57 +176,57 @@ function doGet(e) {
 ### ? Paso 5: Probar
 
 1. Abre `galeria.html` en un navegador
-2. DeberÌas ver:
-   - Indicador de "Cargando im·genes..."
-   - Luego tus fotos aparecen autom·ticamente
-   - Contador de im·genes actualizado
+2. Deber√≠as ver:
+   - Indicador de "Cargando im√°genes..."
+   - Luego tus fotos aparecen autom√°ticamente
+   - Contador de im√°genes actualizado
 
-**Si no funciona**, ve a [SoluciÛn de Problemas](#soluciÛn-de-problemas).
+**Si no funciona**, ve a [Soluci√≥n de Problemas](#soluci√≥n-de-problemas).
 
 ### ?? Agregar Nuevas Fotos
 
-**°S˙per f·cil!** Solo:
+**¬°S√∫per f√°cil!** Solo:
 1. Sube las fotos a tu carpeta de Google Drive
-2. °Listo! Aparecer·n autom·ticamente en la web
+2. ¬°Listo! Aparecer√°n autom√°ticamente en la web
 
 **No necesitas:**
-- ? Editar cÛdigo
+- ? Editar c√≥digo
 - ? Actualizar listas manualmente
-- ? Subir im·genes a GitHub
+- ? Subir im√°genes a GitHub
 
 ---
 
-## ?? ConfiguraciÛn de Contenido
+## ?? Configuraci√≥n de Contenido
 
-**TODO el contenido editable est· en un solo archivo:**
+**TODO el contenido editable est√° en un solo archivo:**
 
-?? **`js/config.js`** ? Edita aquÌ
+?? **`js/config.js`** ? Edita aqu√≠
 
 ### ?? Actualizar Ganadores
 
-Abre `js/config.js` y busca el array `winnersData` (lÌnea ~30):
+Abre `js/config.js` y busca el array `winnersData` (l√≠nea ~30):
 
 ```javascript
 const winnersData = [
     {
         position: "1er Lugar",
-        name: "JoaquÌn Uscamayta (IngenierÌa QuÌmica, UMSA)",
-        edition: "1∫ Torneo Integration Bee Physics",
+        name: "Joaqu√≠n Uscamayta (Ingenier√≠a Qu√≠mica, UMSA)",
+        edition: "1¬∫ Torneo Integration Bee Physics",
         date: "27 de septiembre, 2025"
     },
     {
         position: "2do Lugar",
-        name: "Boris Vargas Villareal (IngenierÌa Electrica, UMSA)",
-        edition: "1∫ Torneo Integration Bee Physics",
+        name: "Boris Vargas Villareal (Ingenier√≠a Electrica, UMSA)",
+        edition: "1¬∫ Torneo Integration Bee Physics",
         date: "27 de septiembre, 2025"
     },
     {
         position: "3er Lugar",
-        name: "Miguel Lopez Monasterios (FÌsica, UMSA)",
-        edition: "1∫ Torneo Integration Bee Physics",
+        name: "Miguel Lopez Monasterios (F√≠sica, UMSA)",
+        edition: "1¬∫ Torneo Integration Bee Physics",
         date: "27 de septiembre, 2025"
     }
-    // Agregar m·s ganadores aquÌ
+    // Agregar m√°s ganadores aqu√≠
 ];
 ```
 
@@ -236,30 +236,30 @@ const winnersData = [
 {
     position: "1er Lugar",
     name: "Nuevo Ganador (Carrera, UMSA)",
-    edition: "2∫ Torneo Integration Bee Physics",
+    edition: "2¬∫ Torneo Integration Bee Physics",
     date: "15 de marzo, 2026"
 },
 ```
 
 ### ?? Actualizar Banco de Preguntas
 
-En `js/config.js`, busca `questionBanksData` (lÌnea ~50):
+En `js/config.js`, busca `questionBanksData` (l√≠nea ~50):
 
 ```javascript
 const questionBanksData = [
     {
         year: 2025,
-        title: "1∫ Torneo Integration Bee Physics",
+        title: "1¬∫ Torneo Integration Bee Physics",
         type: "Problemas de 5 minutos",
-        edition: "Primera EdiciÛn",
+        edition: "Primera Edici√≥n",
         problems: 50,
         pdfUrl: "#"  // Cambiar por URL real
     },
     {
         year: 2025,
-        title: "1∫ Torneo Integration Bee Physics",
+        title: "1¬∫ Torneo Integration Bee Physics",
         type: "Problemas de 3 minutos",
-        edition: "Primera EdiciÛn",
+        edition: "Primera Edici√≥n",
         problems: 30,
         pdfUrl: "#"
     }
@@ -274,9 +274,9 @@ const questionBanksData = [
 ```javascript
 {
     year: 2026,
-    title: "2∫ Torneo Integration Bee Physics",
+    title: "2¬∫ Torneo Integration Bee Physics",
     type: "Problemas de 5 minutos",
-    edition: "Segunda EdiciÛn",
+    edition: "Segunda Edici√≥n",
     problems: 60,
     pdfUrl: "assets/pdfs/torneos/2026-problemas-5min.pdf"
 }
@@ -284,12 +284,12 @@ const questionBanksData = [
 
 **Opciones para la URL del PDF:**
 
-**OpciÛn 1 - Archivo en GitHub:**
+**Opci√≥n 1 - Archivo en GitHub:**
 ```javascript
 pdfUrl: "assets/pdfs/torneos/mi-archivo.pdf"
 ```
 
-**OpciÛn 2 - Google Drive:**
+**Opci√≥n 2 - Google Drive:**
 1. Sube el PDF a Drive
 2. Clic derecho ? Compartir ? Cualquier persona con el enlace
 3. Copia el ID del enlace:
@@ -304,14 +304,14 @@ pdfUrl: "assets/pdfs/torneos/mi-archivo.pdf"
 
 ### ?? Actualizar Videos de YouTube
 
-En `js/config.js`, busca `videosData` (lÌnea ~90):
+En `js/config.js`, busca `videosData` (l√≠nea ~90):
 
 ```javascript
 const videosData = [
     {
         youtubeId: 'dQw4w9WgXcQ',
         thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg',
-        title: 'Resumen 1∫ Torneo Integration Bee'
+        title: 'Resumen 1¬∫ Torneo Integration Bee'
     }
 ];
 ```
@@ -330,24 +330,24 @@ const videosData = [
 {
     youtubeId: 'ABC123xyz',
     thumbnail: 'https://img.youtube.com/vi/ABC123xyz/maxresdefault.jpg',
-    title: 'Resumen 2∫ Torneo Integration Bee'
+    title: 'Resumen 2¬∫ Torneo Integration Bee'
 }
 ```
 
-**El thumbnail se genera autom·ticamente** con:
+**El thumbnail se genera autom√°ticamente** con:
 ```
 https://img.youtube.com/vi/[ID_DEL_VIDEO]/maxresdefault.jpg
 ```
 
-### ?? Actualizar InformaciÛn de Contacto
+### ?? Actualizar Informaci√≥n de Contacto
 
-En `js/config.js`, busca `contactInfo` (lÌnea ~110):
+En `js/config.js`, busca `contactInfo` (l√≠nea ~110):
 
 ```javascript
 const contactInfo = {
     email: 'integrationbee@fiumsa.edu.bo',
     phone: '+591 76543210',
-    address: 'Carrera de FÌsica, UMSA',
+    address: 'Carrera de F√≠sica, UMSA',
     socialMedia: {
         facebook: '#',
         instagram: '#',
@@ -361,13 +361,13 @@ Reemplaza los `'#'` con las URLs reales de tus redes sociales.
 
 ---
 
-## ?? PersonalizaciÛn de DiseÒo
+## ?? Personalizaci√≥n de Dise√±o
 
 **Archivo a editar:** `css/styles.css`
 
 ### ?? Cambiar Colores
 
-Busca la secciÛn `:root` (lÌnea ~10):
+Busca la secci√≥n `:root` (l√≠nea ~10):
 
 ```css
 :root {
@@ -375,7 +375,7 @@ Busca la secciÛn `:root` (lÌnea ~10):
     --color-primary: #FFB627;      /* Amarillo/dorado - Color principal */
     --color-secondary: #5DADE2;    /* Azul - Acentos y botones */
     --color-accent: #F39C12;       /* Naranja - Hover effects */
-    --color-dark: #7D4E1A;         /* MarrÛn - Textos oscuros */
+    --color-dark: #7D4E1A;         /* Marr√≥n - Textos oscuros */
     --color-light: #FFF8E7;        /* Crema - Fondos suaves */
     --color-white: #FFFFFF;        /* Blanco puro */
     --color-text: #333333;         /* Gris oscuro - Texto */
@@ -396,9 +396,9 @@ Busca la secciÛn `:root` (lÌnea ~10):
 }
 ```
 
-### ?? Cambiar TipografÌas
+### ?? Cambiar Tipograf√≠as
 
-En `css/styles.css`, lÌnea ~5:
+En `css/styles.css`, l√≠nea ~5:
 
 ```css
 :root {
@@ -408,17 +408,17 @@ En `css/styles.css`, lÌnea ~5:
 }
 ```
 
-**TipografÌas disponibles (ya importadas):**
+**Tipograf√≠as disponibles (ya importadas):**
 - `Poppins` - Moderna y limpia
-- `Montserrat` - Vers·til y profesional
-- `Fredoka One` - Juguetona para tÌtulos
+- `Montserrat` - Vers√°til y profesional
+- `Fredoka One` - Juguetona para t√≠tulos
 
 **Para usar otra fuente:**
 
 1. Ve a [Google Fonts](https://fonts.google.com/)
 2. Selecciona tu fuente favorita
 3. Clic en "Select this style"
-4. Copia el `@import` y pÈgalo en la lÌnea 18 de `styles.css`
+4. Copia el `@import` y p√©galo en la l√≠nea 18 de `styles.css`
 5. Actualiza las variables en `:root`
 
 **Ejemplo - Cambiar a Roboto:**
@@ -433,62 +433,62 @@ En `css/styles.css`, lÌnea ~5:
 
 ### ??? Personalizar el Fondo de Ecuaciones
 
-**?? IMPORTANTE:** El sitio utiliza una imagen de fondo con ecuaciones matem·ticas.
+**?? IMPORTANTE:** El sitio utiliza una imagen de fondo con ecuaciones matem√°ticas.
 
-**UbicaciÛn:** `assets/images/equations-background.png`
+**Ubicaci√≥n:** `assets/images/equations-background.png`
 
 **Requisitos:**
 - Formato: PNG con fondo transparente
 - Peso: 200-400 KB (optimizada)
-- ResoluciÛn: 1280x900 px o similar
-- Contenido: Ecuaciones matem·ticas distribuidas uniformemente
+- Resoluci√≥n: 1280x900 px o similar
+- Contenido: Ecuaciones matem√°ticas distribuidas uniformemente
 
-**Ajustar opacidad y tamaÒo:**
+**Ajustar opacidad y tama√±o:**
 
-En `css/styles.css`, busca `.equations-bg` (lÌnea ~60):
+En `css/styles.css`, busca `.equations-bg` (l√≠nea ~60):
 
 ```css
 .equations-bg {
     background-image: url('assets/images/equations-background.png');
-    background-size: 1200px auto;  /* TamaÒo del patrÛn */
+    background-size: 1200px auto;  /* Tama√±o del patr√≥n */
     opacity: 0.05;                 /* Intensidad (0.02-0.1) */
     filter: brightness(1.15);      /* Brillo (0.8-1.5) */
 }
 ```
 
 **Ajustes recomendados:**
-- **M·s visible:** `opacity: 0.08`
-- **M·s sutil:** `opacity: 0.03`
-- **PatrÛn m·s grande:** `background-size: 1500px auto`
-- **PatrÛn m·s pequeÒo:** `background-size: 900px auto`
+- **M√°s visible:** `opacity: 0.08`
+- **M√°s sutil:** `opacity: 0.03`
+- **Patr√≥n m√°s grande:** `background-size: 1500px auto`
+- **Patr√≥n m√°s peque√±o:** `background-size: 900px auto`
 
 **Si no tienes la imagen:**
-El sitio funcionar· sin problemas, simplemente no mostrar· el fondo de ecuaciones.
+El sitio funcionar√° sin problemas, simplemente no mostrar√° el fondo de ecuaciones.
 
 ### ?? Ajustar Elementos Decorativos
 
-**Hex·gonos (panal):**
+**Hex√°gonos (panal):**
 ```css
 .honeycomb-bg {
-    opacity: 0.05;  /* Cambiar para m·s/menos visible */
+    opacity: 0.05;  /* Cambiar para m√°s/menos visible */
 }
 ```
 
-**SÌmbolos matem·ticos flotantes:**
+**S√≠mbolos matem√°ticos flotantes:**
 ```css
 .math-symbol {
-    opacity: 0.08;  /* Cambiar para m·s/menos visible */
+    opacity: 0.08;  /* Cambiar para m√°s/menos visible */
 }
 ```
 
 ### ?? Cambiar el Logo
 
-**OpciÛn 1 - Tienes un logo en PNG/SVG:**
+**Opci√≥n 1 - Tienes un logo en PNG/SVG:**
 
 1. Guarda tu logo en `assets/images/logo.png`
-2. El sitio lo cargar· autom·ticamente
+2. El sitio lo cargar√° autom√°ticamente
 
-**OpciÛn 2 - Cambiar manualmente:**
+**Opci√≥n 2 - Cambiar manualmente:**
 
 En `index.html` y `galeria.html`, busca:
 ```html
@@ -502,7 +502,7 @@ Reemplaza con tu URL:
 
 ---
 
-## ?? PublicaciÛn en GitHub Pages
+## ?? Publicaci√≥n en GitHub Pages
 
 ### ?? Requisitos Previos
 
@@ -512,8 +512,8 @@ Reemplaza con tu URL:
 ### Paso 1: Crear Repositorio
 
 1. Ve a https://github.com y crea una cuenta (si no tienes)
-2. Clic en el botÛn **"+"** (arriba derecha) ? **"New repository"**
-3. ConfiguraciÛn:
+2. Clic en el bot√≥n **"+"** (arriba derecha) ? **"New repository"**
+3. Configuraci√≥n:
    - **Repository name:** `integration-bee-umsa`
    - **Description:** "Sitio web oficial del Integration Bee Physics UMSA"
    - **Public** (marcado)
@@ -522,7 +522,7 @@ Reemplaza con tu URL:
 
 ### Paso 2: Subir Archivos
 
-**OpciÛn A - Desde la Web (M·s F·cil):**
+**Opci√≥n A - Desde la Web (M√°s F√°cil):**
 
 1. En tu repositorio, clic en **"Add file"** ? **"Upload files"**
 2. Arrastra TODOS tus archivos y carpetas:
@@ -536,16 +536,16 @@ Reemplaza con tu URL:
    - MANUAL.md
    ```
 3. En "Commit changes":
-   - Mensaje: `VersiÛn inicial del sitio web`
+   - Mensaje: `Versi√≥n inicial del sitio web`
 4. Clic en **"Commit changes"**
 
-**OpciÛn B - Usando Git (Terminal):**
+**Opci√≥n B - Usando Git (Terminal):**
 
 ```bash
 # En la carpeta de tu proyecto:
 git init
 git add .
-git commit -m "VersiÛn inicial del sitio web"
+git commit -m "Versi√≥n inicial del sitio web"
 
 # Conecta con GitHub (reemplaza TU-USUARIO)
 git remote add origin https://github.com/TU-USUARIO/integration-bee-umsa.git
@@ -557,8 +557,8 @@ git push -u origin main
 
 ### Paso 3: Activar GitHub Pages
 
-1. En tu repositorio, ve a **"Settings"** (?? ConfiguraciÛn)
-2. En el men˙ lateral, busca **"Pages"**
+1. En tu repositorio, ve a **"Settings"** (?? Configuraci√≥n)
+2. En el men√∫ lateral, busca **"Pages"**
 3. En **"Build and deployment"**:
    - **Source:** Deploy from a branch
    - **Branch:** `main`
@@ -568,13 +568,13 @@ git push -u origin main
 
 ### Paso 4: Verificar
 
-Tu sitio estar· disponible en:
+Tu sitio estar√° disponible en:
 ```
 https://TU-USUARIO.github.io/integration-bee-umsa/
 ```
 
 **Ejemplo:**
-Si tu usuario es `fisica-umsa`, la URL ser·:
+Si tu usuario es `fisica-umsa`, la URL ser√°:
 ```
 https://fisica-umsa.github.io/integration-bee-umsa/
 ```
@@ -595,21 +595,21 @@ Si compran un dominio (ej: `integrationbee.com`):
 
 ---
 
-## ?? Mantenimiento y ActualizaciÛn
+## ?? Mantenimiento y Actualizaci√≥n
 
-### ?? DespuÈs de Cada Torneo
+### ?? Despu√©s de Cada Torneo
 
-**Checklist de actualizaciÛn:**
+**Checklist de actualizaci√≥n:**
 
 - [ ] Editar `js/config.js` con nuevos ganadores
 - [ ] Subir PDFs nuevos a `assets/pdfs/torneos/`
 - [ ] Actualizar `questionBanksData` con nuevos bancos
-- [ ] Subir fotos nuevas a Google Drive (galerÌa autom·tica)
+- [ ] Subir fotos nuevas a Google Drive (galer√≠a autom√°tica)
 - [ ] Agregar videos a YouTube y actualizar `videosData`
 - [ ] Probar localmente
 - [ ] Subir cambios a GitHub
 
-### ?? Flujo de ActualizaciÛn con Git
+### ?? Flujo de Actualizaci√≥n con Git
 
 ```bash
 # 1. Edita js/config.js
@@ -617,21 +617,21 @@ Si compran un dominio (ej: `integrationbee.com`):
 # 3. Luego:
 
 git add .
-git commit -m "ActualizaciÛn post-torneo 2026"
+git commit -m "Actualizaci√≥n post-torneo 2026"
 git push origin main
 
 # Espera 1-2 minutos y revisa tu sitio web
 ```
 
-### ?? Actualizar GalerÌa
+### ?? Actualizar Galer√≠a
 
-**°S˙per f·cil!**
+**¬°S√∫per f√°cil!**
 
 1. Abre tu carpeta de Google Drive
 2. Sube las fotos nuevas
-3. °Listo! Aparecen autom·ticamente en la web
+3. ¬°Listo! Aparecen autom√°ticamente en la web
 
-**No necesitas editar cÛdigo ni subir a GitHub.**
+**No necesitas editar c√≥digo ni subir a GitHub.**
 
 ### ?? Agregar Nuevo Video
 
@@ -650,13 +650,13 @@ git push origin main
    ```
 4. Sube a GitHub
 
-### ?? Actualizar Solo una P·gina
+### ?? Actualizar Solo una P√°gina
 
 **Si solo modificas `index.html` o `galeria.html`:**
 
 ```bash
 git add index.html
-git commit -m "Actualizar texto en p·gina principal"
+git commit -m "Actualizar texto en p√°gina principal"
 git push origin main
 ```
 
@@ -670,14 +670,14 @@ git push origin main
 
 ---
 
-## ?? SoluciÛn de Problemas
+## ?? Soluci√≥n de Problemas
 
-### ? Las im·genes de Google Drive no cargan
+### ? Las im√°genes de Google Drive no cargan
 
-**SÌntomas:**
-- La galerÌa muestra "Cargando..." eternamente
-- Aparece "Error al cargar im·genes"
-- Contador dice "0 im·genes"
+**S√≠ntomas:**
+- La galer√≠a muestra "Cargando..." eternamente
+- Aparece "Error al cargar im√°genes"
+- Contador dice "0 im√°genes"
 
 **Verificar:**
 
@@ -692,19 +692,19 @@ git push origin main
    - Clic en "Implementar" ? "Administrar implementaciones"
    - Verifica que diga "Cualquier persona" en acceso
 
-3. **Carpeta de Drive p˙blica:**
+3. **Carpeta de Drive p√∫blica:**
    - Abre la carpeta en Drive
    - Clic derecho ? Compartir
    - Debe estar en "Cualquier persona con el enlace"
 
-4. **Hay im·genes en la carpeta:**
+4. **Hay im√°genes en la carpeta:**
    - Verifica que haya archivos JPG, PNG o GIF
-   - Los archivos deben ser im·genes v·lidas
+   - Los archivos deben ser im√°genes v√°lidas
 
 **Probar manualmente:**
 1. Copia la URL de `GOOGLE_SCRIPT_URL`
-2. PÈgala en tu navegador
-3. DeberÌas ver un JSON con tus im·genes:
+2. P√©gala en tu navegador
+3. Deber√≠as ver un JSON con tus im√°genes:
    ```json
    {
      "success": true,
@@ -719,7 +719,7 @@ Si ves esto, el script funciona. Si no:
 
 ### ? El PDF no se visualiza
 
-**Problema:** Al hacer clic en un banco de preguntas, el visor est· en blanco.
+**Problema:** Al hacer clic en un banco de preguntas, el visor est√° en blanco.
 
 **Soluciones:**
 
@@ -733,7 +733,7 @@ Si ves esto, el script funciona. Si no:
 2. **Archivo subido a GitHub:**
    - Ve a tu repositorio en GitHub
    - Navega a `assets/pdfs/torneos/`
-   - Verifica que el PDF estÈ ahÌ
+   - Verifica que el PDF est√© ah√≠
 
 3. **Usa Google Drive como alternativa:**
    ```javascript
@@ -741,10 +741,10 @@ Si ves esto, el script funciona. Si no:
    ```
 
 4. **PDF no protegido:**
-   - El PDF no debe tener contraseÒa
-   - Debe permitir visualizaciÛn
+   - El PDF no debe tener contrase√±a
+   - Debe permitir visualizaci√≥n
 
-### ? Las im·genes locales no cargan
+### ? Las im√°genes locales no cargan
 
 **Problema:** Las fotos en `assets/images/` no se ven.
 
@@ -759,40 +759,40 @@ Si ves esto, el script funciona. Si no:
    <img src="assets/images/logo.png">
    ```
 
-2. **Nombres con may˙sculas:**
+2. **Nombres con may√∫sculas:**
    - GitHub Pages es case-sensitive
    - `logo.PNG` ? `logo.png`
-   - Usa siempre min˙sculas
+   - Usa siempre min√∫sculas
 
 3. **Archivo no subido:**
    - Verifica en GitHub que el archivo exista
-   - Aseg˙rate de haberlo incluido en el commit
+   - Aseg√∫rate de haberlo incluido en el commit
 
-### ? Los cambios no se reflejan en la p·gina
+### ? Los cambios no se reflejan en la p√°gina
 
-**Problema:** ActualicÈ el cÛdigo pero la web sigue igual.
+**Problema:** Actualic√© el c√≥digo pero la web sigue igual.
 
 **Soluciones:**
 
-1. **Esperar propagaciÛn:**
+1. **Esperar propagaci√≥n:**
    - GitHub Pages tarda 1-5 minutos en actualizar
-   - SÈ paciente
+   - S√© paciente
 
-2. **Limpiar cachÈ:**
+2. **Limpiar cach√©:**
    - Presiona `Ctrl + Shift + R` (Windows/Linux)
    - Presiona `Cmd + Shift + R` (Mac)
-   - O abre en modo incÛgnito
+   - O abre en modo inc√≥gnito
 
-3. **Verificar que se subiÛ:**
+3. **Verificar que se subi√≥:**
    ```bash
-   git status  # Ver quÈ archivos han cambiado
+   git status  # Ver qu√© archivos han cambiado
    git add .   # Agregar todos
    git push    # Subir a GitHub
    ```
 
 4. **Revisar errores:**
    - Presiona `F12` en el navegador
-   - Ve a la pestaÒa "Console"
+   - Ve a la pesta√±a "Console"
    - Busca mensajes de error en rojo
 
 ### ? Error "404 - Page not found"
@@ -805,22 +805,22 @@ Si ves esto, el script funciona. Si no:
    - Debe llamarse exactamente `index.html`
    - No `Index.html` ni `INDEX.html`
 
-2. **UbicaciÛn del archivo:**
-   - Debe estar en la raÌz del repositorio
+2. **Ubicaci√≥n del archivo:**
+   - Debe estar en la ra√≠z del repositorio
    - No dentro de una subcarpeta
 
 3. **GitHub Pages activado:**
    - Ve a Settings ? Pages
-   - Verifica que estÈ configurado en "main" y "/ (root)"
+   - Verifica que est√© configurado en "main" y "/ (root)"
 
-4. **Esperar activaciÛn:**
+4. **Esperar activaci√≥n:**
    - Primera vez puede tardar 10 minutos
-   - Refresca la p·gina de Settings ? Pages
+   - Refresca la p√°gina de Settings ? Pages
    - Debe aparecer un banner verde: "Your site is published at..."
 
-### ? El diseÒo se ve mal en mÛvil
+### ? El dise√±o se ve mal en m√≥vil
 
-**Problema:** La p·gina no se adapta a pantallas pequeÒas.
+**Problema:** La p√°gina no se adapta a pantallas peque√±as.
 
 **Verificar:**
 
@@ -831,27 +831,27 @@ Si ves esto, el script funciona. Si no:
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    ```
 
-2. **CSS carg·ndose:**
-   - Abre `F12` ? PestaÒa "Network"
+2. **CSS carg√°ndose:**
+   - Abre `F12` ? Pesta√±a "Network"
    - Busca `styles.css`
    - Debe aparecer con status 200 (verde)
 
 3. **Prueba en diferentes dispositivos:**
    - Usa las herramientas de desarrollador (`F12`)
-   - Clic en el Ìcono de mÛvil
-   - Prueba diferentes tamaÒos
+   - Clic en el √≠cono de m√≥vil
+   - Prueba diferentes tama√±os
 
 ### ? Los colores no cambian
 
-**Problema:** EditÈ las variables CSS pero no se ven cambios.
+**Problema:** Edit√© las variables CSS pero no se ven cambios.
 
 **Causas:**
 
-1. **CachÈ del navegador:**
-   - Limpia cachÈ: `Ctrl + Shift + R`
+1. **Cach√© del navegador:**
+   - Limpia cach√©: `Ctrl + Shift + R`
 
 2. **Editaste el archivo equivocado:**
-   - Aseg˙rate de editar `css/styles.css`
+   - Aseg√∫rate de editar `css/styles.css`
    - No `index.html` (ese ya no tiene estilos embebidos)
 
 3. **Sintaxis incorrecta:**
@@ -865,44 +865,44 @@ Si ves esto, el script funciona. Si no:
 
 4. **No guardaste el archivo:**
    - Verifica que hayas guardado `styles.css`
-   - S˙belo a GitHub
+   - S√∫belo a GitHub
 
 ---
 
 ## ?? Recursos Adicionales
 
-### ?? Para Aprender M·s
+### ?? Para Aprender M√°s
 
-**TecnologÌas del sitio:**
+**Tecnolog√≠as del sitio:**
 - [MDN Web Docs](https://developer.mozilla.org/es/) - HTML, CSS, JavaScript
 - [JavaScript.info](https://javascript.info/) - Tutorial completo de JS
-- [CSS-Tricks](https://css-tricks.com/) - Trucos y guÌas de CSS
+- [CSS-Tricks](https://css-tricks.com/) - Trucos y gu√≠as de CSS
 
 **GitHub y Git:**
-- [GitHub Docs](https://docs.github.com/es) - DocumentaciÛn oficial
-- [Git - GuÌa Sencilla](https://rogerdudler.github.io/git-guide/index.es.html)
+- [GitHub Docs](https://docs.github.com/es) - Documentaci√≥n oficial
+- [Git - Gu√≠a Sencilla](https://rogerdudler.github.io/git-guide/index.es.html)
 - [GitHub Pages Docs](https://docs.github.com/es/pages)
 
 **Google Apps Script:**
 - [Google Apps Script Docs](https://developers.google.com/apps-script)
 - [Drive API Reference](https://developers.google.com/drive/api/v3/reference)
 
-### ?? Herramientas ⁄tiles
+### ?? Herramientas √ötiles
 
-**Editores de cÛdigo:**
+**Editores de c√≥digo:**
 - [Visual Studio Code](https://code.visualstudio.com/) - Editor gratuito (recomendado)
-- [Sublime Text](https://www.sublimetext.com/) - Ligero y r·pido
+- [Sublime Text](https://www.sublimetext.com/) - Ligero y r√°pido
 - [Atom](https://atom.io/) - Hackeable
 
-**OptimizaciÛn:**
-- [TinyPNG](https://tinypng.com/) - Comprimir im·genes
-- [Compressor.io](https://compressor.io/) - Optimizar im·genes
+**Optimizaci√≥n:**
+- [TinyPNG](https://tinypng.com/) - Comprimir im√°genes
+- [Compressor.io](https://compressor.io/) - Optimizar im√°genes
 - [PageSpeed Insights](https://pagespeed.web.dev/) - Analizar rendimiento
 
-**DiseÒo:**
+**Dise√±o:**
 - [Coolors](https://coolors.co/) - Generador de paletas de colores
 - [Google Fonts](https://fonts.google.com/) - Fuentes gratuitas
-- [Font Awesome](https://fontawesome.com/) - Õconos (si quieres agregar)
+- [Font Awesome](https://fontawesome.com/) - √çconos (si quieres agregar)
 
 **Testing:**
 - [BrowserStack](https://www.browserstack.com/) - Probar en diferentes dispositivos
@@ -913,16 +913,16 @@ Si ves esto, el script funciona. Si no:
 **Para principiantes:**
 1. [Codecademy - Learn HTML](https://www.codecademy.com/learn/learn-html)
 2. [freeCodeCamp - Responsive Web Design](https://www.freecodecamp.org/)
-3. [W3Schools](https://www.w3schools.com/) - Referencia r·pida
+3. [W3Schools](https://www.w3schools.com/) - Referencia r√°pida
 
 **Para nivel intermedio:**
-1. [JavaScript30](https://javascript30.com/) - 30 proyectos en 30 dÌas
+1. [JavaScript30](https://javascript30.com/) - 30 proyectos en 30 d√≠as
 2. [CSS Grid Garden](https://cssgridgarden.com/) - Aprender Grid jugando
 3. [Flexbox Froggy](https://flexboxfroggy.com/) - Aprender Flexbox jugando
 
 ---
 
-## ? Checklist de PublicaciÛn
+## ? Checklist de Publicaci√≥n
 
 Antes de publicar cambios importantes, verifica:
 
@@ -932,26 +932,26 @@ Antes de publicar cambios importantes, verifica:
 - [ ] PDFs subidos y accesibles
 - [ ] Google Drive configurado correctamente
 - [ ] Videos de YouTube con IDs correctos
-- [ ] InformaciÛn de contacto actualizada
+- [ ] Informaci√≥n de contacto actualizada
 
 ### Archivos
-- [ ] Todas las im·genes est·n en `assets/images/`
-- [ ] Todos los PDFs est·n en `assets/pdfs/torneos/`
-- [ ] Logo actualizado (si cambiÛ)
+- [ ] Todas las im√°genes est√°n en `assets/images/`
+- [ ] Todos los PDFs est√°n en `assets/pdfs/torneos/`
+- [ ] Logo actualizado (si cambi√≥)
 - [ ] Imagen de fondo `equations-background.png` presente
 
-### CÛdigo
+### C√≥digo
 - [ ] Sin errores en la consola del navegador (`F12`)
 - [ ] Todos los enlaces funcionan
 - [ ] PDFs se visualizan correctamente
-- [ ] GalerÌa carga fotos de Google Drive
+- [ ] Galer√≠a carga fotos de Google Drive
 - [ ] Videos de YouTube se reproducen
 
 ### Responsive
-- [ ] Se ve bien en mÛvil (< 768px)
+- [ ] Se ve bien en m√≥vil (< 768px)
 - [ ] Se ve bien en tablet (768px - 1024px)
 - [ ] Se ve bien en desktop (> 1024px)
-- [ ] NavegaciÛn funciona en mÛvil
+- [ ] Navegaci√≥n funciona en m√≥vil
 
 ### Git/GitHub
 - [ ] Cambios guardados localmente
@@ -959,18 +959,18 @@ Antes de publicar cambios importantes, verifica:
 - [ ] `git commit -m "mensaje descriptivo"`
 - [ ] `git push origin main`
 - [ ] Esperado 2-3 minutos
-- [ ] Revisado en la URL p˙blica
+- [ ] Revisado en la URL p√∫blica
 
 ---
 
 ## ?? Soporte
 
-### Orden de SoluciÛn de Problemas
+### Orden de Soluci√≥n de Problemas
 
-1. ? **Revisa este manual** - La mayorÌa de problemas est·n documentados
-2. ? **Revisa la consola** - Presiona `F12` ? PestaÒa "Console"
+1. ? **Revisa este manual** - La mayor√≠a de problemas est√°n documentados
+2. ? **Revisa la consola** - Presiona `F12` ? Pesta√±a "Console"
 3. ? **Busca en Google** - Copia el mensaje de error exacto
-4. ? **Revisa la documentaciÛn oficial:**
+4. ? **Revisa la documentaci√≥n oficial:**
    - [GitHub Pages](https://docs.github.com/es/pages)
    - [Google Apps Script](https://developers.google.com/apps-script)
 5. ? **Pregunta en foros:**
@@ -980,33 +980,33 @@ Antes de publicar cambios importantes, verifica:
 ### Contacto del Proyecto
 
 Si este manual no resuelve tu problema:
-- ?? Email: [Tu email de contacto tÈcnico]
+- ?? Email: [Tu email de contacto t√©cnico]
 - ?? Grupo interno: [Link a WhatsApp/Telegram del equipo]
 
 ---
 
 ## ?? Historial de Versiones
 
-### VersiÛn 2.0 (Enero 2026)
+### Versi√≥n 2.0 (Enero 2026)
 - ? **Arquitectura modular** - Archivos separados (HTML, CSS, JS)
-- ? **GalerÌa autom·tica** - IntegraciÛn con Google Drive API
-- ? **P·gina de galerÌa** - `galeria.html` independiente
-- ? **ConfiguraciÛn centralizada** - Todo editable en `config.js`
+- ? **Galer√≠a autom√°tica** - Integraci√≥n con Google Drive API
+- ? **P√°gina de galer√≠a** - `galeria.html` independiente
+- ? **Configuraci√≥n centralizada** - Todo editable en `config.js`
 - ? **CSS compartido** - Un solo archivo de estilos
 - ? **JavaScript modular** - Separado por funcionalidad
-- ? **DocumentaciÛn actualizada** - Manual completo
+- ? **Documentaci√≥n actualizada** - Manual completo
 
-### VersiÛn 1.01 (Enero 2026)
-- ActualizaciÛn de ganadores gestiÛn 2025
-- ActualizaciÛn de bancos de preguntas 2025
-- ActualizaciÛn de galerÌa de fotos 2025
+### Versi√≥n 1.01 (Enero 2026)
+- Actualizaci√≥n de ganadores gesti√≥n 2025
+- Actualizaci√≥n de bancos de preguntas 2025
+- Actualizaci√≥n de galer√≠a de fotos 2025
 
-### VersiÛn 1.0 (Noviembre 2025)
-- DiseÒo inicial completado
+### Versi√≥n 1.0 (Noviembre 2025)
+- Dise√±o inicial completado
 - Sistema de ganadores
 - Banco de preguntas con visor de PDF
-- GalerÌa b·sica de fotos y videos
-- DiseÒo responsivo
+- Galer√≠a b√°sica de fotos y videos
+- Dise√±o responsivo
 - Animaciones y elementos interactivos
 
 ---
@@ -1019,7 +1019,7 @@ Si este manual no resuelve tu problema:
    ```bash
    git commit -m "Agregar torneo 2026 con 60 problemas nuevos"
    # Mejor que:
-   git commit -m "actualizaciÛn"
+   git commit -m "actualizaci√≥n"
    ```
 
 2. **Haz copias de seguridad:**
@@ -1034,27 +1034,27 @@ Si este manual no resuelve tu problema:
    # Prueba online antes de fusionar con main
    ```
 
-4. **MantÈn el manual actualizado:**
-   - Si agregas funcionalidades nuevas, documÈntalas aquÌ
-   - Incluye capturas de pantalla si es ˙til
+4. **Mant√©n el manual actualizado:**
+   - Si agregas funcionalidades nuevas, docum√©ntalas aqu√≠
+   - Incluye capturas de pantalla si es √∫til
 
 5. **Comparte conocimiento:**
-   - EnseÒa a otros del equipo a actualizar el sitio
+   - Ense√±a a otros del equipo a actualizar el sitio
    - No dejes que una sola persona sepa todo
 
 ---
 
-## ?? °Felicidades!
+## ?? ¬°Felicidades!
 
-Has completado la documentaciÛn del sitio web Integration Bee Physics UMSA.
+Has completado la documentaci√≥n del sitio web Integration Bee Physics UMSA.
 
 **Recuerda:**
 - ?? Todo el contenido se edita en `js/config.js`
 - ?? Los estilos se cambian en `css/styles.css`
-- ?? La galerÌa se actualiza subiendo fotos a Google Drive
+- ?? La galer√≠a se actualiza subiendo fotos a Google Drive
 - ?? Los cambios se publican con `git push`
 
 ---
 
-*⁄ltima actualizaciÛn: Enero 2026 - VersiÛn 2.0*
+*√öltima actualizaci√≥n: Enero 2026 - Versi√≥n 2.0*
 *Mantenido por: Integration Bee Physics UMSA*
