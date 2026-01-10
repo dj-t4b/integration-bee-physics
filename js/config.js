@@ -19,19 +19,19 @@ const DRIVE_FOLDER_URL = 'https://drive.google.com/drive/folders/1IYcXth0WqpryjJ
 
 const winnersData = [
     {
-        position: "1er Lugar",
+        position: "1° Lugar",
         name: "Joaquín Uscamayta (Ingeniería Química, UMSA)",
         edition: "1º Torneo Integration Bee Physics",
         date: "27 de septiembre, 2025"
     },
     {
-        position: "2do Lugar",
+        position: "2° Lugar",
         name: "Boris Vargas Villareal (Ingeniería Electrónica, UMSA)",
         edition: "1º Torneo Integration Bee Physics",
         date: "27 de septiembre, 2025"
     },
     {
-        position: "3er Lugar",
+        position: "3° Lugar",
         name: "Miguel Lopez Monasterios (Física, UMSA)",
         edition: "1º Torneo Integration Bee Physics",
         date: "27 de septiembre, 2025"
@@ -50,7 +50,7 @@ const questionBanksData = [
         type: "1° etapa de clasificación",
         edition: "Primera Edición",
         problems: 7,
-        pdfUrl: "#" // Reemplazar con la URL real del PDF
+        pdfUrl: "https://github.com/dj-t4b/integration-bee-physics/blob/master/assets/pdfs/torneos/integration_bee/1_examen.pdf" // Reemplazar con la URL real del PDF
     },
     {
         year: 2025,
@@ -58,7 +58,7 @@ const questionBanksData = [
         type: "2° etapa de clasificación",
         edition: "Primera Edición",
         problems: 21,
-        pdfUrl: "#" // Reemplazar con la URL real del PDF
+        pdfUrl: "https://github.com/dj-t4b/integration-bee-physics/blob/master/assets/pdfs/torneos/integration_bee/2_clasificacion.pdf" // Reemplazar con la URL real del PDF
     },
     {
         year: 2025,
@@ -66,7 +66,7 @@ const questionBanksData = [
         type: "Problemas de Muerte Súbita",
         edition: "Primera Edición",
         problems: 11,
-        pdfUrl: "#" // Reemplazar con la URL real del PDF
+        pdfUrl: "https://github.com/dj-t4b/integration-bee-physics/blob/master/assets/pdfs/torneos/integration_bee/6_muerte_subita.pdf" // Reemplazar con la URL real del PDF
     },
     {
         year: 2025,
@@ -74,7 +74,7 @@ const questionBanksData = [
         type: "Octavos de final",
         edition: "Primera Edición",
         problems: 12,
-        pdfUrl: "#" // Reemplazar con la URL real del PDF
+        pdfUrl: "https://github.com/dj-t4b/integration-bee-physics/blob/master/assets/pdfs/torneos/integration_bee/3_octavos.pdf" // Reemplazar con la URL real del PDF
     },
     {
         year: 2025,
@@ -82,7 +82,7 @@ const questionBanksData = [
         type: "Cuartos de final",
         edition: "Primera Edición",
         problems: 12,
-        pdfUrl: "#" // Reemplazar con la URL real del PDF
+        pdfUrl: "https://github.com/dj-t4b/integration-bee-physics/blob/master/assets/pdfs/torneos/integration_bee/4_cuartos.pdf" // Reemplazar con la URL real del PDF
     },
     {
         year: 2025,
@@ -90,7 +90,7 @@ const questionBanksData = [
         type: " Semifinal",
         edition: "Primera Edición",
         problems: 3,
-        pdfUrl: "#" // Reemplazar con la URL real del PDF
+        pdfUrl: "https://github.com/dj-t4b/integration-bee-physics/blob/master/assets/pdfs/torneos/integration_bee/5_semifinal.pdf" // Reemplazar con la URL real del PDF
     },
     {
         year: 2025,
@@ -98,7 +98,7 @@ const questionBanksData = [
         type: "Final",
         edition: "Primera Edición",
         problems: 6,
-        pdfUrl: "#" // Reemplazar con la URL real del PDF
+        pdfUrl: "https://github.com/dj-t4b/integration-bee-physics/blob/master/assets/pdfs/torneos/integration_bee/7_final.pdf" // Reemplazar con la URL real del PDF
     }
     // Agregar más bancos de preguntas aquí
 ];
@@ -124,8 +124,8 @@ const videosData = [
 // ============================================
 
 const contactInfo = {
-    email: 'integrationbee@fiumsa.edu.bo',
-    phone: '+591 76543210',
+    email: 'Todavía no tenemos :"(',
+    phone: '+591 78570606',
     address: 'Carrera de Física, UMSA',
     socialMedia: {
         facebook: '#',
