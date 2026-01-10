@@ -1054,8 +1054,6 @@ Has completado la documentación del sitio web Integration Bee Physics UMSA.
 - ?? La galería se actualiza subiendo fotos a Google Drive
 - ?? Los cambios se publican con `git push`
 
-**¡Buena suerte con el proyecto! ???**
-
 ---
 
 *Última actualización: Enero 2026 - Versión 2.0*
