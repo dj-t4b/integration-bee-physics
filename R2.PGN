@@ -1,0 +1,74 @@
+[Event "4° Abierto Internacional Amazónico"]
+[Site "Cobija, La Toca del Jaguar UAP"]
+[Date "2026.10.21"]
+[Round "2.1"]
+[White "Perez Aduviri, Cristian Zenon"]
+[Black "Acosta, Pablo Ismael"]
+[Result "0-1"]
+[ECO "B90"]
+[WhiteElo "1514"]
+[BlackElo "2452"]
+[PlyCount "50"]
+[EventDate "2026.10.20"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be3 Ng4 7. Qd3 Nc6 8. Nxc6 bxc6 9. Be2 Nxe3 10. Qxe3 Rb8 11. Rb1 g6 12. O-O Bg7 13. Bc4 O-O 14. b3 Qa5 15. Na4 d5 16. exd5 cxd5 17. Bd3 e5 18. Qa7 Rb4 19. c3 Rh4 20. Bc2 e4 21. c4 Qd8 22. Rfd1 Qg5 23. Qe3 Qh5 24. f3 Bh6 25. Qe2 Rxh2 0-1
+
+[Event "4° Abierto Internacional Amazónico"]
+[Site "Cobija, La Toca del Jaguar UAP"]
+[Date "2026.10.21"]
+[Round "2.2"]
+[White "Hoffman, Alejandro"]
+[Black "Opi Crispin, Sebastian"]
+[Result "1-0"]
+[ECO "E81"]
+[WhiteElo "2338"]
+[BlackElo "1447"]
+[PlyCount "75"]
+[EventDate "2026.10.20"]
+
+{[%evp 0,75,41,26,23,-12,45,43,39,22,49,8,20,9,4,13,36,19,39,13,77,110,120,97,97,57,90,84,113,92,138,126,126,101,201,126,312,340,340,340,340,357,432,480,801,500,500,500,515,453,529,477,538,452,701,701,783,792,842,861,771,622,878,906,1317,1320,1342,1342,29987,29988,29991,29992,29995,29996,29997,29998,29999,-30000]} 1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Bg5 h6 7. Be3 e5 8. d5 a5 9. Qd2 g5 10. h4 Nh7 11. hxg5 Nxg5 12. Bd3 Na6 13. Nge2 Nc5 14. Bc2 f5 15. exf5 Bxf5 16. Ng3 Bd7 17. O-O-O c6 18. dxc6 Bxc6 19. Qxd6 Qxd6 20. Rxd6 Na6 21. Nf5 Rad8 22. Rg6 Rxf5 23. Bxf5 Nf7 24. Be6 Kf8 25. Nd5 Bxd5 26. cxd5 Nb4 27. Bc5+ Kg8 28. Bxb4 axb4 29. Rhxh6 Rc8+ 30. Kb1 Re8 31. Rh4 b3 32. Rhg4 bxa2+ 33. Kxa2 Ra8+ 34. Kb3 Kh8 35. Bxf7 Ra3+ 36. bxa3 e4 37. Rh4+ Bh6 38. Rhxh6# 1-0
+
+[Event "4° Abierto Internacional Amazónico"]
+[Site "Cobija, La Toca del Jaguar UAP"]
+[Date "2026.10.21"]
+[Round "2.3"]
+[White "Alejo Paxi, Axcel Alejandro"]
+[Black "Gemy, Jose Daniel"]
+[Result "0-1"]
+[ECO "C47"]
+[WhiteElo "1511"]
+[BlackElo "2312"]
+[PlyCount "72"]
+[EventDate "2026.10.20"]
+
+{[%evp 0,31,22,26,53,51,61,43,25,-61,-6,-60,-23,-23,-18,-18,12,17,9,4,11,-190,-190,-190,-207,-214,-154,-208,-200,-197,-197,-391,-391,-388]} 1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6 4. g3 Bb4 5. Bg2 d6 6. O-O Bg4 7. d3 Nd4 8. Be3 c5 9. Nd5 Nxd5 10. c3 Nxc3 11. bxc3 Bxc3 12. Rc1 Ba5 13. h3 Nxf3+ 14. Bxf3 Bxh3 15. Re1 Bxe1 16. Qxe1 Qd7 17. Bg2 Bxg2 18. Kxg2 f5 19. f4 exf4 20. Bxf4 O-O 21. Rc4 fxe4 22. Qxe4 d5 23. Qe5 Rae8 24. Qc7 Qxc7 25. Bxc7 dxc4 26. dxc4 Re4 27. Bd6 Rxc4 28. g4 Rxg4+ 29. Bg3 c4 30. Kh3 Rxg3+ 31. Kxg3 c3 32. Kg4 c2 33. Kg3 c1=Q 34. Kg4 Qg1+ 35. Kh3 Rf2 36. Kh4 Rh2# 0-1
+
+[Event "4° Abierto Internacional Amazónico"]
+[Site "Cobija, La Toca del Jaguar UAP"]
+[Date "2026.10.21"]
+[Round "2.4"]
+[White "Mayta Aiza, Maveric"]
+[Black "Alejo Javier, Fernando Fidel"]
+[Result "1-0"]
+[ECO "C60"]
+[WhiteElo "2206"]
+[PlyCount "45"]
+[EventDate "2026.10.20"]
+
+{[%evp 0,45,22,38,55,31,36,-9,90,58,106,119,106,74,198,98,110,118,167,157,205,157,185,184,220,220,222,220,498,537,844,844,844,800,810,784,793,793,803,749,756,650,798,836,29997,29998,29999,-30000]} 1. e4 e5 2. Nf3 Nc6 3. Bb5 Nb4 4. c3 c6 5. Be2 Na6 6. Nxe5 Nc5 7. d3 f6 8. Nf3 Ne7 9. Be3 Na6 10. d4 d6 11. O-O Be6 12. d5 cxd5 13. Nd4 Bf7 14. Bb5+ Qd7 15. Bxd7+ Kxd7 16. exd5 Nxd5 17. Re1 Re8 18. Qg4+ Kd8 19. Nd2 Nc5 20. Bf4 h5 21. Rxe8+ Kxe8 22. Qc8+ Ke7 23. Nf5# 1-0
+
+[Event "4° Abierto Internacional Amazónico"]
+[Site "Cobija, La Toca del Jaguar UAP"]
+[Date "2026.10.21"]
+[Round "2.5"]
+[White "Quispe Mayta, Delvin Antonini"]
+[Black "Da Silva, Ricardo Moura"]
+[Result "0-1"]
+[ECO "B13"]
+[WhiteElo "1450"]
+[BlackElo "1910"]
+[PlyCount "92"]
+[EventDate "2026.10.20"]
+
+{[%evp 0,92,22,33,54,65,65,63,71,29,39,39,37,23,-3,19,19,19,16,10,15,27,18,3,17,4,33,27,71,61,85,64,92,68,79,75,78,79,89,83,91,61,59,50,50,-95,-82,-110,-110,-90,-79,-153,-153,-153,-153,-153,-128,-82,-63,-271,-206,-263,-243,-263,-263,-346,-346,-346,-346,-335,-159,-335,-334,-348,-205,-233,-202,-202,-195,-189,-202,-206,-206,-230,-305,-305,-305,-728,-803,-803,-803,-942,-842,-2433,-2927]} 1. e4 c6 2. d4 d5 3. exd5 cxd5 4. Bd3 Nf6 5. Nf3 Bg4 6. Bf4 Nc6 7. c3 e6 8. Nbd2 Bd6 9. Bxd6 Qxd6 10. O-O O-O 11. Qe1 Rfe8 12. Ne5 Bh5 13. f4 Bg6 14. Bxg6 fxg6 15. Rf3 Rf8 16. Qh4 Ne7 17. g4 Rae8 18. Raf1 b5 19. a3 a5 20. R1f2 b4 21. axb4 axb4 22. Nf1 Ne4 23. Rh3 h6 24. Rff3 g5 25. fxg5 Nxg5 26. Rxf8+ Rxf8 27. Re3 Nc6 28. Nxc6 Qxc6 29. Qe1 Nf3+ 30. Rxf3 Rxf3 31. Nd2 Rf6 32. Nb3 bxc3 33. bxc3 Qc4 34. Nc5 Rg6 35. Kh1 Rf6 36. Kg2 Qa2+ 37. Kg3 Qc2 38. Qe3 Qg6 39. Nd7 Rf1 40. Nc5 Kf7 41. Nd3 Qe4 42. Ne5+ Ke7 43. Qd2 Rg1+ 44. Kh3 Re1 45. Kh4 Re2 46. Qf4 g5+ 0-1
+
